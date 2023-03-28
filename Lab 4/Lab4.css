@@ -1,0 +1,314 @@
+﻿@keyframes EYE_blink {
+	0% {height: 100px; top: 28px}
+	15% {height: 0px; top: 78px}
+	30% {height: 100px; top: 28px}
+}
+@keyframes PUPIL_blink {
+	0% {top: 40px}
+	15% {top: -10px}
+	30% {top: 40px; left: 40px}
+	40% {left: 25px}
+	50% {left: 55px}
+	60% {left: 40px}
+}
+@keyframes GLINT_blink {
+	0% {height: 90px; width: 90px; top: 10px; left: 10px}
+	15% {height: 40px; width: 180px; top: -5px; left: -40px}
+	30% {height: 90px; width: 90px; top: 10px; left: 10px}
+}
+@keyframes EYE_STREAK_1_blink {
+	0% {top: 2px}
+	15% {top: 0px}
+	30% {top: 2px}
+}
+@keyframes EYE_STREAK_2_blink {
+	0% {top: 18px}
+	15% {top: 0px}
+	30% {top: 18px}
+}
+
+
+body {
+	background-color: #a8a09c;
+}
+
+.Body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 600px;
+
+	object-fit: fill;
+
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.Head{
+	width: 400px;
+	height: 550px;
+	background-color: rgb(210, 180, 85);
+
+	border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(0, 0, 0);
+
+	overflow: hidden;
+
+	position: absolute;
+}
+
+.Nose {
+	width: 60px;
+	height: 60px;
+	background-color: rgb(190, 160, 60);
+
+	border-radius: 20%;
+
+	rotate: 45deg;
+	position: absolute;
+	top: 305px;
+	left: 170px;
+}
+.Nose_Occlusion_1 {
+	width: 60px;
+	height: 60px;
+	background-color: rgb(210, 180, 85);
+
+	border-radius: 20%;
+
+	rotate: 10deg;
+	position: absolute;
+	top: 15px;
+	left: 8px;
+}
+.Nose_Occlusion_2 {
+	width: 60px;
+	height: 60px;
+	background-color: rgb(210, 180, 85);
+
+	border-radius: 20%;
+
+	rotate: -10deg;
+	position: absolute;
+	top: 8px;
+	left: 15px;
+}
+
+.Mouth {
+	width: 60px;
+	height: 20px;
+	background-color: rgb(0, 0, 0);
+
+	border-radius: 5px 5px 20% 20%;
+
+	position: absolute;
+	top: 380px;
+	left: 170px;
+}
+.Mouth_Rim {
+	width: 1200px;
+	height: 1200px;
+
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(0, 0, 0);
+
+	position: absolute;
+	top: -803px;
+	left: -400px;
+}
+
+.Right_Eye_Rim {
+	width: 160px;
+	height: 160px;
+
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(30, 25, 10);
+
+	position: absolute;
+	top: 140px;
+	left: 38px;
+}
+
+.Left_Eye_Rim {
+	width: 160px;
+	height: 160px;
+
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(30, 25, 10);
+
+	position: absolute;
+	top: 140px;
+	left: 202px;
+}
+
+.Occluder_1 {
+	width: 40px;
+	height: 10px;
+	background-color: rgb(210, 180, 85);
+
+	border-radius: 20%;
+
+	rotate: 24deg;
+	position: absolute;
+	top: 145px;
+	left: 25px;
+}
+.Occluder_2 {
+	width: 40px;
+	height: 10px;
+	background-color: rgb(210, 180, 85);
+
+	border-radius: 20%;
+
+	rotate: -24deg;
+	position: absolute;
+	top: 145px;
+	left: 95px;
+}
+.Occluder_3 {
+	width: 60px;
+	height: 20px;
+	background-color: rgb(210, 180, 85);
+
+	border-radius: 20%;
+
+	rotate: -44deg;
+	position: absolute;
+	top: 125px;
+	left: 100px;
+}
+.Occluder_4 {
+	width: 60px;
+	height: 20px;
+	background-color: rgb(210, 180, 85);
+
+	border-radius: 20%;
+
+	rotate: 44deg;
+	position: absolute;
+	top: 125px;
+	left: 0px;
+}
+
+
+.Eye {
+	width: 100px;
+	height: 100px;
+	background-color: rgb(255, 235, 140);
+
+	border-radius: 50%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: rgb(130, 115, 55);
+
+	overflow: hidden;
+
+	position: absolute;
+	top: 28px;
+	left: 28px;
+
+	animation-name: EYE_blink;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.Glint {
+	width: 90px;
+	height: 90px;
+	background-color: rgb(235, 210, 100);
+
+	border-radius: 50%;
+
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	
+	animation-name: GLINT_blink;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.Pupil {
+	width: 20px;
+	height: 20px;
+	background-color: rgb(0, 0, 0);
+
+	border-radius: 50%;
+
+	position: absolute;
+	top: 40px;
+	left: 40px;
+
+	animation-name: PUPIL_blink;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.Streak_1 {
+	width: 2px;
+	height: 64px;
+	background-color: rgb(60, 60, 60);
+
+	position: absolute;
+	top: 18px;
+	left: 9px;
+	
+	animation-name: EYE_STREAK_2_blink;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.Streak_2 {
+	width: 2px;
+	height: 94px;
+	background-color: rgb(60, 60, 60);
+
+	position: absolute;
+	top: 3px;
+	left: 29px;
+
+	animation-name: EYE_STREAK_1_blink;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.Streak_3 {
+	width: 2px;
+	height: 100px;
+	background-color: rgb(60, 60, 60);
+
+	position: absolute;
+	top: 0px;
+	left: 49px;
+}
+.Streak_4 {
+	width: 2px;
+	height: 64px;
+	background-color: rgb(60, 60, 60);
+
+	position: absolute;
+	top: 18px;
+	left: 89px;
+
+	animation-name: EYE_STREAK_2_blink;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
+.Streak_5 {
+	width: 2px;
+	height: 94px;
+	background-color: rgb(60, 60, 60);
+
+	position: absolute;
+	top: 3px;
+	left: 69px;
+
+	animation-name: EYE_STREAK_1_blink;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+}
