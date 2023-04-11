@@ -23,7 +23,7 @@ book1.setAttribute("mc-title", "Fallen Stars")
 book1.setAttribute("mc-subtitle", "Alejandro Martinez")
 book1.setAttribute("mc-description", "A young child awakens in a ruthless world, her home. Will she survive or live?")
 book1.setAttribute("mc-linkurl", "chapter1.html")
-book1.setAttribute("mc-image", "../components/logo.jpg")
+book1.setAttribute("mc-image", "https://i.imgur.com/5zEz490.jpeg")
 
 document.body.appendChild(a1)
 document.body.appendChild(h1)

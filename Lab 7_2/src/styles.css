@@ -38,7 +38,3 @@ body {
 	align-items: center;
 	overflow: hidden;
 }
-
-* {
-	transition: all 0.25s ease-out;
-}

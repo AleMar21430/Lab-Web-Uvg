@@ -32,7 +32,7 @@ book1.setAttribute("mc-title", "Fallen Stars")
 book1.setAttribute("mc-subtitle", "Alejandro Martinez")
 book1.setAttribute("mc-description", "A young child awakens in a ruthless world, her home. Will she survive or live?")
 book1.setAttribute("mc-linkurl", "Chapter 1.html")
-book1.setAttribute("mc-image", "../components/logo.jpg")
+book1.setAttribute("mc-image", "https://i.imgur.com/5zEz490.jpeg")
 
 book2.setAttribute("mc-title", "Re:Zero Kasaneru")
 book2.setAttribute("mc-subtitle", "Tappei Nagatsuki")
