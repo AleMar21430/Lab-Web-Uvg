@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab 7</title>
+		<style>
+			* {
+				background:transparent;
+				color:rgb(200,200,200);
+				margin-left: 2%;
+			}
+		
+			@keyframes rotate {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
+		
+			.gradient {
+				--size: 250px;
+				--speed: 50s;
+				--easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+				width: var(--size);
+				height: var(--size);
+				filter: blur(calc(var(--size) / 5));
+				background-image: linear-gradient(rgba(55, 235, 169, 0.85), #5b37eb);
+				animation: rotate var(--speed) var(--easing) alternate infinite;
+				border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+			}
+		
+			@media (min-width: 720px) {
+				.gradient {
+					--size: 500px;
+				}
+			}
+		
+			body {
+				background-color: #222;
+				position: absolute;
+				inset: 0;
+				place-content: center;
+				align-items: center;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<br><a href="../index.nginx-debian.html">Labs</a>
+		<h1>Alejandro Martínez - 21430 Lab 7
+		<h2><a href="src/index.html">Src</a>
+		<h2><a href="sin_babel dev/index.html">Sin Babel Dev</a>
+		<h2><a href="sin_babel prod/index.html">Sin Babel Prod</a>
+		<h2><a href="output_babel/index.html">Babel</a>
+		<div class="gradient"></div>
+	</body>
+</html>

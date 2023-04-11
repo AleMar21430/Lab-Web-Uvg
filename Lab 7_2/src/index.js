@@ -1,5 +1,5 @@
 ﻿import ('./styles.scss')
-import "@babel/polyfill"
+import ("@babel/polyfill")
 
 let style = document.createElement("link")
 style.rel="stylesheet"
@@ -21,7 +21,7 @@ let a3 = document.createElement("a")
 let a4 = document.createElement("a")
 
 a1.textContent = "Labs"
-a1.setAttribute("href", "../../index.nginx-debian.html")
+a1.setAttribute("href", "../index.html")
 h1.textContent = "Lab 7 Alejandro Martinez 21430"
 a2.textContent = "Popular Books"
 a2.setAttribute("href", "./pages/popular.html")
