@@ -12,7 +12,7 @@ module.exports = {
 		"pages/newreleases": "./src/pages/newreleases.js",
 	},
 	output: {
-		path: path.resolve(__dirname, "prod"),
+		path: path.resolve(__dirname, "output_babel"),
 		filename: "[name].bundle.js"
 	},
 	plugins: [
@@ -54,11 +54,14 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.scss$/i,
+				test: /\.js$/,
+				exclude:/node_modules/,
+				use: "babel-loader",
+				test: /\.(sa|sc|c)ss$/,
 				use: [
-					"style-loader",
-					"css-loader",
-					"sass-loader",
+					{loader: "style-loader"},
+					{loader: "css-loader"},
+					{loader: "sass-loader"},
 				],
 			},
 		],
