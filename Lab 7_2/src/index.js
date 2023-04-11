@@ -1,4 +1,5 @@
 ﻿import ('./styles.scss')
+import "@babel/polyfill"
 
 let style = document.createElement("link")
 style.rel="stylesheet"
