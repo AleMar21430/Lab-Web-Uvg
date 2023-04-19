@@ -11,18 +11,19 @@ body{
 	display: flex;
 	justify-content:center;
 	background-color: rgb(255, 255, 255);
+	padding-left: 2rem;
 	margin-top: 0;
 }
 .Header_Logo {
 	height: 2rem;
 	margin-top: 0.6%;
-	margin-right: 22.5%;
+	margin-right: 20%;
 }
 .Header_Link {
 	color: rgb(75,75,75);
 	text-align: center;
 	text-decoration: none;
-	padding: 1%;
+	padding: 0.9%;
 	border-color: rgb(75,175,255);
 	border-style: inset;
 	border-width: 0;
@@ -37,7 +38,7 @@ body{
 	color: rgb(50,50,50);
 	text-align: center;
 	text-decoration: none;
-	padding: 1%;
+	padding: 0.9%;
 	border-color: rgb(50,50,50);
 	border-style: solid;
 	border-width: 0;
