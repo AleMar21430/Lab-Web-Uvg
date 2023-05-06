@@ -26,3 +26,17 @@ function slide() {
 	}
 	
 }
+
+function lightgroupChange(type) {
+	if (type == 1) {
+		document.getElementById("Lightgroups_Img").style.backgroundImage = 'url("./resources/cycles_light_groups_pavilion_combined.jpg")'
+	} else if (type == 2) {
+		document.getElementById("Lightgroups_Img").style.backgroundImage = 'url("./resources/cycles_light_groups_pavilion_interior.jpg")'
+	} else if (type == 3) {
+		document.getElementById("Lightgroups_Img").style.backgroundImage = 'url("./resources/cycles_light_groups_pavilion_pool.jpg")'
+	} else if (type == 4) {
+		document.getElementById("Lightgroups_Img").style.backgroundImage = 'url("./resources/cycles_light_groups_pavilion_bench.jpg")'
+	} else if (type == 5) {
+		document.getElementById("Lightgroups_Img").style.backgroundImage = 'url("./resources/cycles_light_groups_pavilion_world.jpg")'
+	}
+}

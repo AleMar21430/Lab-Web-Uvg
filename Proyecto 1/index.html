@@ -68,31 +68,29 @@
 		<div class="Lightgroups_Img">
 			<p class="Lightgroups_H">LET THERE BE</p>
 			<p class="Lightgroups_H2">LIGHT GROUPS</p>
-			<p class="Lightgroups_P">A new type of Cycles render pass that contains only the lighting from<br/>a subset of light sources.</p>
+			<p class="Lightgroups_P">A new type of Cycles render pass that contains only the lighting from a subset of light sources.</p>
 		</div>
 
 		<div class="Lightgroups_D">
-			<p class="Lightgroups_P">Light Groups can be used in order to e.g. modify the color and/or<br/>intensity of light sources in the compositor without re-rendering.</p>
+			<p class="Lightgroups_P">Light Groups can be used in order to e.g. modify the color and/or intensity of light sources in the compositor without re-rendering.</p>
 			<ul class="Lightgroups_UL">
-				<button class="Lightgroups_B">Combined
-					<div class="Hover"></div>
+				<button class="Lightgroups_B" id="Lightgroups_B1" onclick="lightgroupChange(1)">Combined
+					<div class="Hover" id="Lightgroups_Hover1"></div>
 				</button>
-				<button class="Lightgroups_B">Interior
-					<div class="Hover"></div>
+				<button class="Lightgroups_B" id="Lightgroups_B2" onclick="lightgroupChange(2)">Interior
+					<div class="Hover" id="Lightgroups_Hover2"></div>
 				</button>
-				<button class="Lightgroups_B">Pool
-					<div class="Hover"></div>
+				<button class="Lightgroups_B" id="Lightgroups_B3" onclick="lightgroupChange(3)">Pool
+					<div class="Hover" id="Lightgroups_Hover3"></div>
 				</button>
-				<button class="Lightgroups_B">Benches
-					<div class="Hover"></div>
+				<button class="Lightgroups_B" id="Lightgroups_B4" onclick="lightgroupChange(4)">Benches
+					<div class="Hover" id="Lightgroups_Hover4"></div>
 				</button>
-				<button class="Lightgroups_B">World
-					<div class="Hover"></div>
+				<button class="Lightgroups_B" id="Lightgroups_B5" onclick="lightgroupChange(5)">World
+					<div class="Hover" id="Lightgroups_Hover5"></div>
 				</button>
 			</ul>
-			<div class="Lightgroups_D2">
-				<div class="Lightgroups_Img2"></div>
-			</div>
+			<div class="Lightgroups_Img2" id="Lightgroups_Img"></div>
 		</div>
 
 		<div class="Lightgroups_D3">
@@ -102,14 +100,23 @@
 		<div class="Caustics_D">
 			<div class="Caustics_Compare">
 				<div class="Caustics_V">
-					<video class="Caustics_V" muted loop autoplay src="https://www.blender.org/wp-content/uploads/2022/05/cycles_caustics_old_s.mp4" type="video/mp4"></video>
+					<video class="Caustics_V" muted loop autoplay src="./resources/cycles_caustics_new_s.mp4" type="video/mp4"></video>
 					<span class="Caustics_S2" id="Label_Left">Blender 3.2</span>
 				</div>
 				<div class="Caustics_V" id="Video">
-					<video class="Caustics_V" muted loop autoplay src="https://www.blender.org/wp-content/uploads/2022/05/cycles_caustics_new_s.mp4" type="video/mp4"></video>
+					<video class="Caustics_V" muted loop autoplay src="./resources/cycles_caustics_old_s.mp4" type="video/mp4"></video>
 					<span class="Caustics_S">Blender 3.1</span>
 				</div>
 				<input class="Slider" type="range" min="0" max="100" value="50" id="Video_Slider" oninput="slide()">
+			</div>
+			<div class="Caustics_D2">
+				<p class="Caustics_H">SHADOW</p>
+				<p class="Caustics_H2">CAUSTICS</p>
+				<p class="Caustics_P">Cycles now supports selective rendering of caustics in shadows of refractive objects.</p>
+				<br/>
+				<p class="Caustics_P">This is based on “Manifold Next Event Estimation”, a method developed for production rendering.</p>
+				<br/>
+				<a class="Caustics_A" href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Shadow_Caustics">Read More</a>
 			</div>
 		</div>
 	</body>
