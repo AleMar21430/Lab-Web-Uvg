@@ -1,31 +1,34 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 body{
 	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	font-size: 11pt;
+	font-size: 12pt;
 	font-weight: 400;
 	color: white;
 	border-style: solid;
 	border-width: 0;
 	background-color: rgb(25, 25, 25);
 	background-color: rgb(0, 0, 0);
-	margin: 0;
 }
+
 .Header {
 	display: flex;
 	justify-content:center;
+	align-items: center;
 	background-color: white;
-	padding-left: 3rem;
-	margin: 0;
+	min-height: 3rem;
 }
 .Header_Logo {
 	height: 2rem;
 	margin-top: 0.6%;
-	margin-right: 17.5%;
 }
-.Header_Link {
+.Header_Link, .Header_Link_Selected {
 	color: rgb(75,75,75);
 	text-align: center;
 	text-decoration: none;
-	padding: 0.8%;
+	padding: 0.8rem;
 	border-color: rgb(75,175,255);
 	border-style: inset;
 	border-width: 0;
@@ -38,24 +41,18 @@ body{
 }
 .Header_Link_Selected {
 	color: rgb(50,50,50);
-	text-align: center;
-	text-decoration: none;
-	padding: 0.8%;
 	border-color: rgb(50,50,50);
-	border-style: solid;
 	border-width: 0;
 	border-bottom-width: 0.2rem;
 }
 .Header_Button {
-	background-color: rgb(0,150,255);
+	background-color: rgb(90,145,250);
 	color: white;
 	text-align: center;
 	text-decoration: none;
 	font-weight: 400;
-	height: 0.9rem;
-	margin-top: 0.8rem;
-	padding: 0.1% 1% 0.5% 1%;
-	border-color: rgb(0,150,255);
+	padding: 0.2% 1% 0.2% 1%;
+	border-color: rgb(90,145,250);
 	border-style: solid;
 	border-radius: 5px;
 	border-width: 2px;
@@ -66,44 +63,40 @@ body{
 }
 .Sub_Header {
 	position: sticky;
-	top: 0;
 	display: flex;
-	justify-content:left;
+	justify-content: left;
+	align-items: center;
 	background-color: rgb(40, 45, 50);
+	min-height: 2.5rem;
+	top: 0;
 	margin: 0;
-	padding-left: 26rem;
 	border-color: rgb(75,75,75);
 	border-style: inset;
 	border-width: 0;
 	border-bottom-width: 1px;
 }
-.Sub_Header_Link {
+.Sub_Header_Link, .Sub_Header_Link_Selected {
 	color: gray;
 	font-size: 10.5pt;
 	font-weight: 500;
 	text-align: center;
 	text-decoration: none;
 	padding: 0.8% 1.15% 0.5% 1.15%;
-	border-color: rgb(0,150,255);
+	height: 100%;
+	border-color: rgb(90,145,250);
 	border-style: inset;
 	border-width: 0;
 	transition: 0.2s ease-in-out;
 }
 .Sub_Header_Link:hover {
-	color: rgb(0,150,255);
-	border-color: rgb(0,150,255);
+	color: rgb(90,145,250);
+	border-color: rgb(90,145,250);
 	border-bottom-width: 0.2rem;
 }
 .Sub_Header_Link_Selected {
 	color: rgb(255,255,255);
-	text-align: center;
-	text-decoration: none;
-	padding: 0.8% 1.15% 0.5% 1.15%;
 	border-color: white;
-	border-style: inset;
-	border-width: 0;
 	border-bottom-width: 0.2rem;
-	margin-bottom: 1px;
 }
 
 .Reach_New_Lights_Img {
@@ -117,7 +110,7 @@ body{
 	height: 35rem;
 }
 .Reach_New_Lights_H {
-	font-size: 45pt;
+	font-size: 55pt;
 	font-weight: 700;
 	margin: 0;
 	margin-bottom: 2rem;
@@ -125,17 +118,19 @@ body{
 	padding-top: 10rem;
 }
 .Reach_New_Lights_B {
-	background-color: rgb(0,150,255);
+	background-color: rgb(90,145,250);
+	font-size: 14pt;
 	color: white;
 	text-align: center;
 	text-decoration: none;
 	font-weight: 500;
 	margin-left: 20%;
 	padding: 0.2% 3% 0.4% 3%;
-	border-color: rgb(0,150,255);
+	border-color: rgb(90,145,250);
 	border-style: solid;
 	border-radius: 5px;
 	border-width: 2px;
+	box-shadow: 0 0 25px rgba(90,145,250,0.5);
 }
 .Reach_New_Lights_B:hover {
 	background-color: rgba(0,150,255,0.25);
@@ -143,11 +138,11 @@ body{
 }
 .Reach_New_Lights_P {
 	text-align: right;
-	font-size: 8.5pt;
+	font-size: 10pt;
 	color: rgb(175, 175, 175);
 	margin: 0;
 	width: 95%;
-	padding-top: 12%;
+	padding-top: 10%;
 }
 .Present_D {
 	align-items: center;
@@ -368,7 +363,7 @@ body{
 	margin: 0;
 	font-size: 50pt;
 	font-weight: 400;
-	background: linear-gradient(to right, #487ef2, #90e9ff);
+	background: linear-gradient(to right, rgb(5,110,235), rgb(40,190,245));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -377,7 +372,7 @@ body{
 	margin-top: -2rem;
 	font-size: 50pt;
 	font-weight: 700;
-	background: linear-gradient(to right, #487ef2, #90e9ff);
+	background: linear-gradient(to right,rgb(5,110,235), rgb(40,190,245));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -391,10 +386,10 @@ body{
 	font-size: 16pt;
 	font-weight: 500;
 	text-decoration: none;
-	color: #487ef2;
+	color: rgb(0,150,255);
 	padding: 1.5% 3% 2% 3%;
 	border-style: solid;
-	border-color: #487ef2;
+	border-color: rgb(0,150,255);
 	border-width: 2px;
 	border-radius: 5px;
 	transition: 0.2s ease-in-out;
@@ -402,4 +397,100 @@ body{
 .Caustics_A:hover {
 	font-size: 17pt;
 	padding: 1.7% 3.1% 2.2% 3.1%;
+}
+
+.Volume_D {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	margin-top: 15rem;
+}
+.Volume_V {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 75%;
+	border-width: 0;
+	border-radius: 10px;
+}
+.Volume_H {
+	font-size: 45pt;
+	font-weight: 500;
+	text-align: center;
+	top:25%;
+	z-index: 2;
+	margin: 0;
+	padding: 0;
+}
+.Volume_H2 {
+	font-size: 60pt;
+	font-weight: 700;
+	text-align: center;
+	z-index: 2;
+	padding: 0;
+	margin: 0;
+}
+.Volume_P {
+	font-size: 17.5pt;
+	font-weight: 400;
+	text-align: center;
+	z-index: 2;
+	width: 45rem;
+	padding: 0;
+	margin: 0;
+}
+.Volume_A {
+	font-size: 16pt;
+	font-weight: 500;
+	text-decoration: none;
+	z-index: 2;
+	color: white;
+	padding: 0.5rem 1rem 0.8rem 1rem;
+	border-style: solid;
+	border-color: white;
+	border-width: 2px;
+	border-radius: 5px;
+	transition: 0.2s ease-in-out;
+}
+.Volume_A:hover {
+	font-size: 17pt;
+	padding: 0.6rem 1.2rem 0.9rem 1.2rem;
+}
+
+/* Small */
+.Sub_Header {
+	padding-left: 5%;
+}
+
+@media (min-width:600px) {
+	.Header_Logo {
+		margin-right: 2.5%;
+	}
+
+	.Sub_Header {
+		padding-left: 10%;
+	}
+}
+
+@media (min-width:1000px) {
+	.Header_Logo {
+		margin-right: 7.5%;
+	}
+
+	.Sub_Header {
+		padding-left: 15%;
+	}
+}
+
+@media (min-width:1200px) {
+	.Header_Logo {
+		margin-right: 12.5%;
+	}
+	
+	.Sub_Header {
+		padding-left: 20%;
+	}
 }
