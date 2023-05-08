@@ -1,9 +1,12 @@
 {
 	"scripts": {
 		"webpack": "webpack",
-		"build": "webpack"
+		"build": "webpack",
+		"babel": "babel src -d functions/src && babel index.js -d functions",
+		"firebaseServe": "firebase serve --only functions,hosting"
 	},
 	"devDependencies": {
+		"express": "^4.18.2",
 		"@babel/cli": "^7.21.0",
 		"@babel/core": "^7.21.4",
 		"@babel/preset-env": "^7.21.5",

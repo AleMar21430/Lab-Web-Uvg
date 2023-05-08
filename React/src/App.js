@@ -1,6 +1,6 @@
 import React from 'react'
 
-function App(props) {
+function App() {
 	return(
 		<div class="Volume_D">
 			<p class="Volume_H">VOLUME</p>
@@ -12,5 +12,4 @@ function App(props) {
 		</div>
 	)
 }
-
 export default App
