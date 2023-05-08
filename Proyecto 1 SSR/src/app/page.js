@@ -50,7 +50,7 @@ function Caustics() {
 		const newValue = e.target.value;
 		setValue(newValue);
 	};
-  
+
 	const getClipPath = () => {
 		return `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
 	};
@@ -76,7 +76,6 @@ function Caustics() {
 			<input class={styles.Slider} type="range" min="0" max="100" value={value} onChange={handleSliderChange}/>
 		</div>
 	)
-	
 }
 
 function Color_Operations() {
@@ -234,15 +233,74 @@ export default function Home() {
 		</div>
 
 		<div class={styles.Color_D}>
-			<p class={styles.Color_H}>COLOR ME</p>
-			<p class={styles.Color_H}>IMPRESSED</p>
+			<p class={styles.Color_H}>COLOR ME IMPRESSED</p>
 			<p class={styles.Color_P}>Blender 3.2 revolutionizes polygon painting with new tools, usability improvements, and unprecedented performance.</p>
-			<video class={styles.Color_V} muted loop autoplay src="./31-einar_performance_demo_s.mp4" type="video/mp4"></video>
+			<video class={styles.Color_V} muted loop autoPlay src="./31-einar_performance_demo_s.mp4" type="video/mp4"></video>
 		</div>
 
 		<Color_Operations/>
 
-		<script type="text/javascript" src="./static/functions.js"></script>
+		<div class={styles.Card_D}>
+			<div class={styles.Card_DL}>
+				<p class={styles.Color_H2}>REMESH</p>
+				<p class={styles.Card_P}>Now when using the voxel remesher all color attributes will be preserved.</p>
+				<p class={styles.Card_P}>This is perfect to color your sculpts as you still experiment and block out the general shapes.</p>
+			<br/>
+				<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html">Read More</a>
+			</div>
+			<video class={styles.Card_V} muted loop autoPlay src="./21-remeshing_timelaspse_cut_s.mp4" type="video/mp4"></video>
+		</div>
+
+		<div class={styles.Card_D}>
+			<video class={styles.Card_V} muted loop autoPlay src="./22-masking_timelaspse_cut_s.mp4" type="video/mp4"></video>
+			<div class={styles.Card_DR}>
+				<p class={styles.Color_H2}>MASK OUT</p>
+				<p class={styles.Card_P}>Masking, auto-masking and face sets are fully supported with color attribute painting.</p>
+			</div>
+		</div>
+
+		<div class={styles.Card_D}>
+			<video class={styles.Card_V} muted loop autoPlay src="./asset_browser_collections_s.mp4" type="video/mp4"></video>
+			<div class={styles.Card_DR}>
+				<p class={styles.Card_T}>ASSET BROWSER</p>
+				<p class={styles.Card_H1}>ASSET</p>
+				<p class={styles.Card_H2}>COLLECTIONS</p>
+				<p class={styles.Card_P}>Expand your asset library with Collections!</p>
+
+				<li class={styles.Card_P}>Add Collection assets as instances or real objects.</li>
+				<li class={styles.Card_P}>Thumbnails are automatically generated, or customize it with your own.</li>
+			</div>
+		</div>
+
+		<div class={styles.Card_D}>
+			<div class={styles.Card_DL}>
+				<p class={styles.Color_H2}>REMESH</p>
+				<p class={styles.Card_P}>Now when using the voxel remesher all color attributes will be preserved.</p>
+				<p class={styles.Card_P}>This is perfect to color your sculpts as you still experiment and block out the general shapes.</p>
+			<br/>
+				<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html">Read More</a>
+			</div>
+			<video class={styles.Card_V} muted loop autoPlay src="./pentool_s.mp4" type="video/mp4"></video>
+		</div>
+
+		<div class={styles.Card_D}>
+			<video class={styles.Card_V} muted loop autoPlay src="./grease_pencil_envelope.mp4" type="video/mp4"></video>
+			<div class={styles.Card_DR}>
+				<p class={styles.Color_H2}>MASK OUT</p>
+				<p class={styles.Card_P}>Masking, auto-masking and face sets are fully supported with color attribute painting.</p>
+			</div>
+		</div>
+
+		<div class={styles.Card_D}>
+			<div class={styles.Card_DL}>
+				<p class={styles.Color_H2}>REMESH</p>
+				<p class={styles.Card_P}>Now when using the voxel remesher all color attributes will be preserved.</p>
+				<p class={styles.Card_P}>This is perfect to color your sculpts as you still experiment and block out the general shapes.</p>
+			<br/>
+				<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html">Read More</a>
+			</div>
+			<video class={styles.Card_V} muted loop autoPlay src="./vse_channels.jpg" type="video/mp4"></video>
+		</div>
 	</body>
 	)
 }
