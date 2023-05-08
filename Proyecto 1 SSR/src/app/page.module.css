@@ -253,12 +253,12 @@
 	margin: 0;
 	margin-top: 4rem;
 }
-.Lightgroups_UL {
+.Lightgroups_UL, .Color_UL {
 	display: flex;
 	justify-content:center;
 	height: 2rem;
 }
-.Lightgroups_B {
+.Lightgroups_B, .Color_B {
 	height: 1rem;
 	width: 6.5rem;
 	color: rgb(150,150,150);
@@ -273,7 +273,7 @@
 .Lightgroups_B:hover {
 	color: rgb(200,200,200);
 }
-.Hover {
+.Lightgroups_Hover, .Color_Hover {
 	padding: 0;
 	margin: 0;
 	padding-top: 5px;
@@ -286,12 +286,12 @@
 	width: 90%;
 	transition: 0.2s ease-in-out;
 }
-.Lightgroups_B:hover div {
+.Lightgroups_B:hover div, .Color_B:hover div {
 	margin-left: -5%;
 	width: 110%;
 	border-color: rgb(200,200,200);
 }
-.Lightgroups_Img_Showcase {
+.Lightgroups_Img2, .Color_V2 {
 	border-width: 0;
 	width: 70%;
 	height: 35rem;
@@ -374,7 +374,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: start;
 	padding-left: 5%;
 	width: 35%;
 }
@@ -418,7 +418,7 @@
 	padding: 1.7% 3.1% 2.2% 3.1%;
 }
 
-.Volume_D {
+.Volume_D, .Cycles_D, .Color_D {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -440,7 +440,7 @@
 	font-weight: 500;
 	text-align: center;
 	top:25%;
-	z-index: 2;
+	z-index: 1;
 	margin: 0;
 	padding: 0;
 }
@@ -461,7 +461,7 @@
 	padding: 0;
 	margin: 0;
 }
-.Volume_A {
+.Volume_A, .Cycles_B {
 	font-size: 16pt;
 	font-weight: 500;
 	text-decoration: none;
@@ -474,17 +474,89 @@
 	border-radius: 5px;
 	transition: 0.2s ease-in-out;
 }
-.Volume_A:hover {
+.Volume_A:hover, .Cycles_B:hover {
 	font-size: 17pt;
 	padding: 0.6rem 1.2rem 0.9rem 1.2rem;
 }
+.Cycles_P {
+	font-size: 28pt;
+	color: rgb(0,150,255);
+	font-weight: 500;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.Cycles_A {
+	font-size: 12pt;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.Cycles_A:hover {
+	text-decoration: underline;
+}
+
+.Color_H {
+	font-size: 60pt;
+	font-weight: 700;
+	text-align: center;
+	top:25%;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to bottom right, rgb(205,125,255), rgb(100,220,255));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.Color_P {
+	font-size: 17.5pt;
+	font-weight: 400;
+	text-align: center;
+	z-index: 2;
+	width: 45rem;
+	padding: 0;
+	margin: 0;
+}
+.Color_V {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	border-width: 0;
+	background-color: gray;
+	background-blend-mode: multiply;
+}
+.Color_A {
+	font-size: 17.5pt;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+.Color_B {
+	width: 8rem;
+	color:rgb(140, 75, 180)
+}
+.Color_Hover {
+	margin-left: 0%;
+	width: 100%;
+	border-color:rgb(140, 75, 180)
+}
+.Color_B:hover {
+	color:rgb(205,125,255)
+}
+.Color_B:hover div {
+	border-color:rgb(205, 125, 255)
+}
+
+
+
 
 
 .Reach_New_Lights_H {
 	padding-left: 0%;
 	padding-top: 10rem;
 }
-
 .Caustics_D{
 	padding-left: 1%;
 }

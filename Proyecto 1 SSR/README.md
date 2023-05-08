@@ -1,8 +1,18 @@
 # Alejandro Martinez - 21430
-## Blender 3.2 Release [Clone](https://blender-clone-ssr.firebaseapp.com/)
-## Blender 3.2 Release [Original](https://www.blender.org/download/releases/3-2/)
+Blender 3.2 Release [Clone](https://blender-clone-ssr.firebaseapp.com/)
 
+Blender 3.2 Release [Original](https://www.blender.org/download/releases/3-2/)
+#
+# Dependencies:
+## React
+## Next.js
+## Firebase Hosting
 
+#
+# Run:
+```
+npm install 
+```
 
 
 
