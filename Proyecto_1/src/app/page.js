@@ -3,19 +3,19 @@ import { useState } from 'react'
 import styles from './page.module.css'
 
 function Light_Groups() {
-	const [Video_Path, setBackgroundImage] = useState("./resources/cycles_light_groups_pavilion_combined.jpg")
+	const [Video_Path, setBackgroundImage] = useState("./cycles_light_groups_pavilion_combined.jpg")
 
 	function lightgroupChange (type) {
 		if (type == 1) {
-			setBackgroundImage("./resources/cycles_light_groups_pavilion_combined.jpg")
+			setBackgroundImage("./cycles_light_groups_pavilion_combined.jpg")
 		} else if (type == 2) {
-			setBackgroundImage("./resources/cycles_light_groups_pavilion_interior.jpg")
+			setBackgroundImage("./cycles_light_groups_pavilion_interior.jpg")
 		} else if (type == 3) {
-			setBackgroundImage("./resources/cycles_light_groups_pavilion_pool.jpg")
+			setBackgroundImage("./cycles_light_groups_pavilion_pool.jpg")
 		} else if (type == 4) {
-			setBackgroundImage("./resources/cycles_light_groups_pavilion_bench.jpg")
+			setBackgroundImage("./cycles_light_groups_pavilion_bench.jpg")
 		} else if (type == 5) {
-			setBackgroundImage("./resources/cycles_light_groups_pavilion_world.jpg")
+			setBackgroundImage("./cycles_light_groups_pavilion_world.jpg")
 		}
 	}
 	return (
@@ -66,11 +66,11 @@ function Caustics() {
 	return(
 		<div class={styles.Caustics_Compare}>
 			<div class={styles.Caustics_V}>
-				<video class={styles.Caustics_V} muted loop autoPlay src="./resources/cycles_caustics_new_s.mp4" type="video/mp4"></video>
+				<video class={styles.Caustics_V} muted loop autoPlay src="./cycles_caustics_new_s.mp4" type="video/mp4"></video>
 				<span class={styles.Caustics_S2} style={{clipPath: getLabelClipPath()}}>Blender 3.2</span>
 			</div>
 			<div class={styles.Caustics_V} style={{clipPath: getClipPath()}}>
-				<video class={styles.Caustics_V} muted loop autoPlay src="./resources/cycles_caustics_old_s.mp4" type="video/mp4"></video>
+				<video class={styles.Caustics_V} muted loop autoPlay src="./cycles_caustics_old_s.mp4" type="video/mp4"></video>
 				<span class={styles.Caustics_S}>Blender 3.1</span>
 			</div>
 			<input class={styles.Slider} type="range" min="0" max="100" value={value} onChange={handleSliderChange}/>
@@ -83,7 +83,7 @@ export default function Home() {
 	return (
 	<body class={styles.body}>
 		<ul class={styles.Header}>
-			<img class={styles.Header_Logo} src="./resources/Logo_Blender.png"/>
+			<img class={styles.Header_Logo} src="./Logo_Blender.png"/>
 			<a class={styles.Header_Link} href="https://www.blender.org/features/">Features</a>
 			<a class={styles.Header_Link_Selected} href="https://www.blender.org/download/">Download</a>
 			<a class={styles.Header_Link} href="https://www.blender.org/support/">Support</a>
@@ -168,7 +168,7 @@ export default function Home() {
 			<p class={styles.Volume_P}>Introducing support for motion blur for gas simulations and imported OpenVDB volumes.</p>
 			<br/>
 			<a class={styles.Volume_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Volume_Motion_Blur">Read More</a>
-			<video class={styles.Volume_V} muted loop autoPlay src="./resources/cycles_volume.mp4" type="video/mp4"></video>
+			<video class={styles.Volume_V} muted loop autoPlay src="./cycles_volume.mp4" type="video/mp4"></video>
 		</div>
 		<script type="text/javascript" src="./static/functions.js"></script>
 	</body>

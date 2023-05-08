@@ -132,7 +132,7 @@
 	align-items: flex-start;
 	background-color: gray;
 	background-blend-mode: multiply;
-	background-image: url("../../public/resources/oksana-dobrovolska-s.jpg");
+	background-image: url("../../public/oksana-dobrovolska-s.jpg");
 	height: 35rem;
 }
 .Reach_New_Lights_H {
@@ -218,7 +218,7 @@
 	align-items: center;
 	background-color: gray;
 	background-blend-mode: multiply;
-	background-image: url("../../public/resources/cycles_light_groups.jpg");
+	background-image: url("../../public/cycles_light_groups.jpg");
 	height: 30rem;
 }
 .Lightgroups_H {
