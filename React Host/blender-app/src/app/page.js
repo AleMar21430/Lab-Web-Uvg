@@ -12,19 +12,19 @@ function Button(props) {
 }
 
 function Light_Groups() {
-	const [Group_Type, setBackgroundImage] = useState(styles.Lightgroups_Img_Combined)
+	const [Video_Path, setBackgroundImage] = useState("./resources/cycles_light_groups_pavilion_combined.jpg")
 
 	function lightgroupChange (type) {
 		if (type == 1) {
-			setBackgroundImage(styles.Lightgroups_Img_Combined)
+			setBackgroundImage("./resources/cycles_light_groups_pavilion_combined.jpg")
 		} else if (type == 2) {
-			setBackgroundImage(styles.Lightgroups_Img_Interior)
+			setBackgroundImage("./resources/cycles_light_groups_pavilion_interior.jpg")
 		} else if (type == 3) {
-			setBackgroundImage(styles.Lightgroups_Img_Pool)
+			setBackgroundImage("./resources/cycles_light_groups_pavilion_pool.jpg")
 		} else if (type == 4) {
-			setBackgroundImage(styles.Lightgroups_Img_Bench)
+			setBackgroundImage("./resources/cycles_light_groups_pavilion_bench.jpg")
 		} else if (type == 5) {
-			setBackgroundImage(styles.Lightgroups_Img_World)
+			setBackgroundImage("./resources/cycles_light_groups_pavilion_world.jpg")
 		}
 	}
 	return (
@@ -47,7 +47,7 @@ function Light_Groups() {
 				<div class={styles.Hover}></div>
 			</button>
 			</ul>
-			<div class={Group_Type}></div>
+			<div class={styles.Lightgroups_Img_Showcase} style={{ backgroundImage: `url(${Video_Path})` }}></div>
 		</div>
 	)
 }
@@ -65,11 +65,15 @@ function Caustics() {
 	return(
 		<div class={styles.Caustics_Compare}>
 			<div class={styles.Caustics_V}>
-				<video class={styles.Caustics_V} muted loop autoplay src="./resources/cycles_caustics_new_s.mp4" type="video/mp4"></video>
+				<video class={styles.Caustics_V} muted loop autoplay type="video/mp4">
+					<source src="./resources/cycles_caustics_new_s.mp4" />
+				</video>
 				<span class={styles.Caustics_S2}>Blender 3.2</span>
 			</div>
 			<div class={styles.Caustics_V}>
-				<video class={styles.Caustics_V} muted loop autoplay src="./resources/cycles_caustics_old_s.mp4" type="video/mp4"></video>
+				<video class={styles.Caustics_V} muted loop autoplay type="video/mp4">
+					<source src="./resources/cycles_caustics_old_s.mp4" />
+				</video>
 				<span class={styles.Caustics_S}>Blender 3.1</span>
 			</div>
 			<input class={styles.Slider} type="range" min="0" max="100" value="50" oninput={() =>slide()}/>

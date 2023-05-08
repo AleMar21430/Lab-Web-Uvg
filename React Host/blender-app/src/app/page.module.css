@@ -133,7 +133,7 @@
 	align-items: flex-start;
 	background-color: gray;
 	background-blend-mode: multiply;
-	background-image: url("./resources/oksana-dobrovolska-s.jpg");
+	background-image: url("../../public/resources/oksana-dobrovolska-s.jpg");
 	height: 35rem;
 }
 .Reach_New_Lights_H {
@@ -219,7 +219,7 @@
 	align-items: center;
 	background-color: gray;
 	background-blend-mode: multiply;
-	background-image: url("./resources/cycles_light_groups.jpg");
+	background-image: url("../../public/resources/cycles_light_groups.jpg");
 	height: 30rem;
 }
 .Lightgroups_H {
@@ -292,26 +292,11 @@
 	width: 110%;
 	border-color: rgb(200,200,200);
 }
-.Lightgroups_Img_Combined, .Lightgroups_Img_Interior, .Lightgroups_Img_Pool, .Lightgroups_Img_Bench, .Lightgroups_Img_World {
+.Lightgroups_Img_Showcase {
 	border-width: 0;
 	width: 70%;
 	height: 35rem;
 	border-radius: 8px;
-}
-.Lightgroups_Img_Combined {
-	background-image: url("./resources/cycles_light_groups_pavilion_combined.jpg");
-}
-.Lightgroups_Img_Interior {
-	background-image: url("./resources/cycles_light_groups_pavilion_interior.jpg");
-}
-.Lightgroups_Img_Pool {
-	background-image: url("./resources/cycles_light_groups_pavilion_pool.jpg");
-}
-.Lightgroups_Img_Bench {
-	background-image: url("./resources/cycles_light_groups_pavilion_bench.jpg");
-}
-.Lightgroups_Img_World {
-	background-image: url("./resources/cycles_light_groups_pavilion_world.jpg");
 }
 .Lightgroups_D3 {
 	align-items: center;
