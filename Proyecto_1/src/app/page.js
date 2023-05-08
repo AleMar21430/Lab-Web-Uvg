@@ -1,15 +1,6 @@
 "use client"
 import { useState } from 'react'
 import styles from './page.module.css'
-import Image from 'next/image'
-
-function Button(props) {
-	return (
-		<button onClick={props.onClick}>
-			{props.label}
-		</button>
-	);
-}
 
 function Light_Groups() {
 	const [Video_Path, setBackgroundImage] = useState("./resources/cycles_light_groups_pavilion_combined.jpg")
@@ -53,30 +44,36 @@ function Light_Groups() {
 }
 
 function Caustics() {
-	function slide() {
-		let value = document.getElementById("Video_Slider").value
-		document.getElementById("Video").style.clipPath = "polygon(0 0, " + value + "% 0, " + value + "% 100%, 0 100%)"
+	const [value, setValue] = useState(50);
+
+	const handleSliderChange = (e) => {
+		const newValue = e.target.value;
+		setValue(newValue);
+	};
+  
+	const getClipPath = () => {
+		return `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
+	};
+
+	const getLabelClipPath = () => {
 		if (value > 78) {
-			document.getElementById("Label_Left").style.clipPath = "polygon(100% 0, " + (value-77)*5 + "% 0, " + (value-77)*5 + "% 100%, 100% 100%)"
-		} else {
-			document.getElementById("Label_Left").style.clipPath = "polygon(100% 0, 0 0, 0 100%, 100% 100%)"
-		}
-	}
+			return `polygon(100% 0, ${(value - 77) * 5}% 0, ${(value - 77) * 5}% 100%, 100% 100%)`;
+			} else {
+				return "polygon(100% 0, 0 0, 0 100%, 100% 100%)";
+			}
+	};
+
 	return(
 		<div class={styles.Caustics_Compare}>
 			<div class={styles.Caustics_V}>
-				<video class={styles.Caustics_V} muted loop autoplay type="video/mp4">
-					<source src="./resources/cycles_caustics_new_s.mp4" />
-				</video>
-				<span class={styles.Caustics_S2}>Blender 3.2</span>
+				<video class={styles.Caustics_V} muted loop autoPlay src="./resources/cycles_caustics_new_s.mp4" type="video/mp4"></video>
+				<span class={styles.Caustics_S2} style={{clipPath: getLabelClipPath()}}>Blender 3.2</span>
 			</div>
-			<div class={styles.Caustics_V}>
-				<video class={styles.Caustics_V} muted loop autoplay type="video/mp4">
-					<source src="./resources/cycles_caustics_old_s.mp4" />
-				</video>
+			<div class={styles.Caustics_V} style={{clipPath: getClipPath()}}>
+				<video class={styles.Caustics_V} muted loop autoPlay src="./resources/cycles_caustics_old_s.mp4" type="video/mp4"></video>
 				<span class={styles.Caustics_S}>Blender 3.1</span>
 			</div>
-			<input class={styles.Slider} type="range" min="0" max="100" value="50" oninput={() =>slide()}/>
+			<input class={styles.Slider} type="range" min="0" max="100" value={value} onChange={handleSliderChange}/>
 		</div>
 	)
 	
@@ -171,7 +168,7 @@ export default function Home() {
 			<p class={styles.Volume_P}>Introducing support for motion blur for gas simulations and imported OpenVDB volumes.</p>
 			<br/>
 			<a class={styles.Volume_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Volume_Motion_Blur">Read More</a>
-			<video class={styles.Volume_V} muted loop autoplay src="./resources/cycles_volume.mp4" type="video/mp4"></video>
+			<video class={styles.Volume_V} muted loop autoPlay src="./resources/cycles_volume.mp4" type="video/mp4"></video>
 		</div>
 		<script type="text/javascript" src="./static/functions.js"></script>
 	</body>
