@@ -3,7 +3,7 @@ import { useState } from 'react'
 import styles from './page.module.css'
 
 function Light_Groups() {
-	const [Video_Path, setBackgroundImage] = useState("./cycles_light_groups_pavilion_combined.jpg")
+	const [Image_Path, setBackgroundImage] = useState("./cycles_light_groups_pavilion_combined.jpg")
 
 	function lightgroupChange (type) {
 		if (type == 1) {
@@ -23,22 +23,22 @@ function Light_Groups() {
 			<p class={styles.Lightgroups_P}>Light Groups can be used in order to e.g. modify the color and/or intensity of light sources in the compositor without re-rendering.</p>
 			<ul class={styles.Lightgroups_UL}>
 			<button class={styles.Lightgroups_B} onClick={() => lightgroupChange(1)}>Combined
-				<div class={styles.Hover}></div>
+				<div class={styles.Lightgroups_Hover}></div>
 			</button>
 			<button class={styles.Lightgroups_B} onClick={() => lightgroupChange(2)}>Interior
-				<div class={styles.Hover}></div>
+				<div class={styles.Lightgroups_Hover}></div>
 			</button>
 			<button class={styles.Lightgroups_B} onClick={() => lightgroupChange(3)}>Pool
-				<div class={styles.Hover}></div>
+				<div class={styles.Lightgroups_Hover}></div>
 			</button>
 			<button class={styles.Lightgroups_B} onClick={() => lightgroupChange(4)}>Benches
-				<div class={styles.Hover}></div>
+				<div class={styles.Lightgroups_Hover}></div>
 			</button>
 			<button class={styles.Lightgroups_B} onClick={() => lightgroupChange(5)}>World
-				<div class={styles.Hover}></div>
+				<div class={styles.Lightgroups_Hover}></div>
 			</button>
 			</ul>
-			<div class={styles.Lightgroups_Img_Showcase} style={{ backgroundImage: `url(${Video_Path})` }}></div>
+			<div class={styles.Lightgroups_Img_Showcase} style={{ backgroundImage: `url(${Image_Path})` }}></div>
 		</div>
 	)
 }
@@ -77,6 +77,48 @@ function Caustics() {
 		</div>
 	)
 	
+}
+
+function Color_Operations() {
+	const [Video_Path, setBackgroundVideo] = useState("./11-PaintBrush_cut_s.mp4")
+
+	function colorModeChange (type) {
+		if (type == 1) {
+			setBackgroundVideo("./11-PaintBrush_cut_s.mp4")
+		} else if (type == 2) {
+			setBackgroundVideo("./12-SmearBrush_cut_s.mp4")
+		} else if (type == 3) {
+			setBackgroundVideo("./13-MaskByColor_cut_s.mp4")
+		} else if (type == 4) {
+			setBackgroundVideo("./14-ColorFilter_cut_s.mp4")
+		}
+	}
+	return (
+		<div class={styles.Color_D}>
+			<p class={styles.Color_H}>PAINT IT BACK</p>
+			<p class={styles.Color_P}>Paint is now available in Sculpt mode! Taking advantage of the performance improvements you can now paint on millions of polygons.</p>
+			<p class={styles.Color_P}>
+				Check out
+				<a class={styles.Color_A}>the file</a>
+				used on the video below.
+			</p>
+			<ul class={styles.Color_UL}>
+			<button class={styles.Color_B} onClick={() => colorModeChange(1)}>Paint Brush
+				<div class={styles.Color_Hover}></div>
+			</button>
+			<button class={styles.Color_B} onClick={() => colorModeChange(2)}>Smear Brush
+				<div class={styles.Color_Hover}></div>
+			</button>
+			<button class={styles.Color_B} onClick={() => colorModeChange(3)}>Mask by Color
+				<div class={styles.Color_Hover}></div>
+			</button>
+			<button class={styles.Color_B} onClick={() => colorModeChange(4)}>Color Filter Tool
+				<div class={styles.Color_Hover}></div>
+			</button>
+			</ul>
+			<video class={styles.Color_V2} muted loop autoPlay src={Video_Path} type="video/mp4"></video>
+		</div>
+	)
 }
 
 export default function Home() {
@@ -170,6 +212,36 @@ export default function Home() {
 			<a class={styles.Volume_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Volume_Motion_Blur">Read More</a>
 			<video class={styles.Volume_V} muted loop autoPlay src="./cycles_volume.mp4" type="video/mp4"></video>
 		</div>
+		
+		<div class={styles.Cycles_D}>
+			<p class={styles.Cycles_P}>MORE CYCLES</p>
+			<br/>
+			<a class={styles.Cycles_A} href="http://developer.blender.org/rB630d2b6">Support Adaptive Sampling with Scrambling Distance</a>
+			<a class={styles.Cycles_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#AMD_GPU_Rendering">AMD GPU Rendering for Linux</a>
+			<br/>
+			<a class={styles.Cycles_A} href="http://developer.blender.org/rB5ac4e6c">OpenColorIO color space aliases support</a>
+			<a class={styles.Cycles_A} href="http://developer.blender.org/rBf991f5a">New Linear ACEScg color space</a>
+			<br/>
+			<a class={styles.Cycles_A} href="http://developer.blender.org/rB5b4ab89">Add Alpha Output to Object Info node</a>
+			<a class={styles.Cycles_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Color_Management">Support different Color Management for Render and Viewport</a>
+			<br/>
+			<a class={styles.Cycles_A} href="http://developer.blender.org/rBae217295578">Automatically unpause viewport when switching to rendered mode</a>
+			<br/>
+			<a class={styles.Cycles_A} href="http://developer.blender.org/rBe81d7bfcc9f4">Enable Alembic procedural for final renders</a>
+			<a class={styles.Cycles_A} href="http://developer.blender.org/rB6787cc13d4ef">Support for Baking to UDIM tiles</a>
+			<br/>
+			<a class={styles.Cycles_B} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Volume_Motion_Blur">See all Cycles changes</a>
+		</div>
+
+		<div class={styles.Color_D}>
+			<p class={styles.Color_H}>COLOR ME</p>
+			<p class={styles.Color_H}>IMPRESSED</p>
+			<p class={styles.Color_P}>Blender 3.2 revolutionizes polygon painting with new tools, usability improvements, and unprecedented performance.</p>
+			<video class={styles.Color_V} muted loop autoplay src="./31-einar_performance_demo_s.mp4" type="video/mp4"></video>
+		</div>
+
+		<Color_Operations/>
+
 		<script type="text/javascript" src="./static/functions.js"></script>
 	</body>
 	)
