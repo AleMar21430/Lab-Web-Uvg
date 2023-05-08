@@ -245,7 +245,7 @@ export default function Home() {
 				<p class={styles.Color_H2}>REMESH</p>
 				<p class={styles.Card_P}>Now when using the voxel remesher all color attributes will be preserved.</p>
 				<p class={styles.Card_P}>This is perfect to color your sculpts as you still experiment and block out the general shapes.</p>
-			<br/>
+				<br/>
 				<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html">Read More</a>
 			</div>
 			<video class={styles.Card_V} muted loop autoPlay src="./21-remeshing_timelaspse_cut_s.mp4" type="video/mp4"></video>
@@ -269,37 +269,42 @@ export default function Home() {
 
 				<li class={styles.Card_P}>Add Collection assets as instances or real objects.</li>
 				<li class={styles.Card_P}>Thumbnails are automatically generated, or customize it with your own.</li>
+				<br/>
+				<a class={styles.Volume_A} href="https://developer.blender.org/rB253e4e7ed22b">Read More</a>
 			</div>
 		</div>
 
 		<div class={styles.Card_D}>
 			<div class={styles.Card_DL}>
-				<p class={styles.Color_H2}>REMESH</p>
-				<p class={styles.Card_P}>Now when using the voxel remesher all color attributes will be preserved.</p>
-				<p class={styles.Card_P}>This is perfect to color your sculpts as you still experiment and block out the general shapes.</p>
-			<br/>
-				<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html">Read More</a>
+				<p class={styles.Card_T}>MODELING</p>
+				<p class={styles.Card_H3}>CURVE</p>
+				<p class={styles.Card_H4}>PEN TOOL</p>
+				<p class={styles.Card_P}>Quickly add, delete, and tweak control points. Hold modifier keys to switch handle types.</p>
 			</div>
 			<video class={styles.Card_V} muted loop autoPlay src="./pentool_s.mp4" type="video/mp4"></video>
 		</div>
 
 		<div class={styles.Card_D}>
 			<video class={styles.Card_V} muted loop autoPlay src="./grease_pencil_envelope.mp4" type="video/mp4"></video>
-			<div class={styles.Card_DR}>
-				<p class={styles.Color_H2}>MASK OUT</p>
-				<p class={styles.Card_P}>Masking, auto-masking and face sets are fully supported with color attribute painting.</p>
+			<div class={styles.Card_DR}>	
+				<p class={styles.Card_T}>GREASE PENCIL</p>
+				<p class={styles.Card_H3}>ENVELOPE</p>
+				<p class={styles.Card_H4}>MODIFIER</p>
+				<p class={styles.Card_P}>This new modifier connects all points that are N points apart, a shape known as envelope.</p>
+				<br/>
+				<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/grease_pencil/modifiers/generate/envelope.html">See the Manual</a>
 			</div>
 		</div>
 
 		<div class={styles.Card_D}>
 			<div class={styles.Card_DL}>
-				<p class={styles.Color_H2}>REMESH</p>
-				<p class={styles.Card_P}>Now when using the voxel remesher all color attributes will be preserved.</p>
-				<p class={styles.Card_P}>This is perfect to color your sculpts as you still experiment and block out the general shapes.</p>
-			<br/>
-				<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html">Read More</a>
+				<p class={styles.Card_T}>VIDEO SEQUENCER</p>
+				<p class={styles.Card_H3}>ENHANCED</p>
+				<p class={styles.Card_H4}>CHANNELS</p>
+				<p class={styles.Card_P}>Organize your edits by giving channels a name!</p>
+				<p class={styles.Card_P}>You can also mute and lock entire channels.</p>
 			</div>
-			<video class={styles.Card_V} muted loop autoPlay src="./vse_channels.jpg" type="video/mp4"></video>
+			<img class={styles.Card_Img} src="./vse_channels.jpg"/>
 		</div>
 	</body>
 	)

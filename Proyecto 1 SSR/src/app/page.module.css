@@ -68,10 +68,12 @@
 	border-style: solid;
 	border-radius: 5px;
 	border-width: 2px;
+	transition: 0.2s ease-in-out;
 }
 .Header_Button:hover {
 	background-color: rgba(0,150,255,0.25);
 	color: rgb(75,175,255);
+	transform: scale(1.1);
 }
 .Sub_Header, .Sub_Header_2 {
 	display: flex;
@@ -155,10 +157,12 @@
 	border-radius: 5px;
 	border-width: 2px;
 	box-shadow: 0 0 25px rgba(90,145,250,0.5);
+	transition: 0.2s ease-in-out;
 }
 .Reach_New_Lights_B:hover {
 	background-color: rgba(0,150,255,0.25);
 	color: rgb(75,175,255);
+	transform: scale(1.1);
 }
 .Reach_New_Lights_P {
 	text-align: right;
@@ -413,9 +417,8 @@
 	border-radius: 5px;
 	transition: 0.2s ease-in-out;
 }
-.Caustics_A:hover {
-	font-size: 17pt;
-	padding: 1.7% 3.1% 2.2% 3.1%;
+.Caustics_A:hover, .Volume_A:hover, .Cycles_B:hover {
+	transform: scale(1.1);
 }
 
 .Volume_D, .Cycles_D, .Color_D {
@@ -473,10 +476,6 @@
 	border-width: 2px;
 	border-radius: 5px;
 	transition: 0.2s ease-in-out;
-}
-.Volume_A:hover, .Cycles_B:hover {
-	font-size: 17pt;
-	padding: 0.6rem 1.2rem 0.9rem 1.2rem;
 }
 .Cycles_P {
 	font-size: 28pt;
@@ -585,11 +584,12 @@
 	padding: 0;
 	margin: 0;
 }
-.Card_V {
+.Card_V, .Card_Img {
 	width: 40rem;
 	border-width: 0;
 	height: fit-content;
 	border-radius: 10px;
+	transition: transform 0.3s ease;
 }
 .Card_P {
 	font-size: 17.5pt;
@@ -599,7 +599,7 @@
 	padding: 0;
 	margin: 0;
 }
-.Card_H1 {
+.Card_H1, .Card_H2, .Card_H3, .Card_H4 {
 	font-size: 50pt;
 	font-weight: 500;
 	text-align: left;
@@ -609,16 +609,19 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-.Card_H2 {
+.Card_H2, .Card_H4 {
 	font-size: 60pt;
 	font-weight: 700;
-	text-align: left;
-	margin: 0;
-	padding: 0;
-	background: linear-gradient(to bottom right, rgb(255, 35, 45), rgb(255, 135, 200));
+}
+.Card_H3, .Card_H4 {
+	background: linear-gradient(to bottom right, rgb(230, 255, 35), rgb(170, 255, 135));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.Card_Img:hover {
+	transform: scale(1.1);
+}
+
 
 
 
