@@ -73,7 +73,7 @@
 .Header_Button:hover {
 	background-color: rgba(0,150,255,0.25);
 	color: rgb(75,175,255);
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 .Sub_Header, .Sub_Header_2 {
 	display: flex;
@@ -162,7 +162,7 @@
 .Reach_New_Lights_B:hover {
 	background-color: rgba(0,150,255,0.25);
 	color: rgb(75,175,255);
-	transform: scale(1.1);
+	transform: scale(1.05);
 }
 .Reach_New_Lights_P {
 	text-align: right;
@@ -417,8 +417,8 @@
 	border-radius: 5px;
 	transition: 0.2s ease-in-out;
 }
-.Caustics_A:hover, .Volume_A:hover, .Cycles_B:hover {
-	transform: scale(1.1);
+.Caustics_A:hover, .Volume_A:hover, .Cycles_B:hover, .Nodes_A:hover {
+	transform: scale(1.05);
 }
 
 .Volume_D, .Cycles_D, .Color_D {
@@ -464,7 +464,7 @@
 	padding: 0;
 	margin: 0;
 }
-.Volume_A, .Cycles_B {
+.Volume_A, .Cycles_B, .Nodes_A {
 	font-size: 16pt;
 	font-weight: 500;
 	text-decoration: none;
@@ -477,6 +477,17 @@
 	border-radius: 5px;
 	transition: 0.2s ease-in-out;
 }
+
+.Cycles_D2 {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 2rem 0 2rem 0;
+	width: 70%;
+}
 .Cycles_P {
 	font-size: 28pt;
 	color: rgb(0,150,255);
@@ -486,12 +497,12 @@
 	padding: 0;
 }
 .Cycles_A {
-	font-size: 12pt;
+	font-size: 14pt;
 	color: white;
 	text-decoration: none;
 	text-align: center;
 	margin: 0;
-	padding: 0;
+	padding: 0.5% 2% 0.5% 2%;
 }
 .Cycles_A:hover {
 	text-decoration: underline;
@@ -525,7 +536,7 @@
 	position: absolute;
 	object-fit: cover;
 	width: 100%;
-	max-height: 30rem;
+	height: 30rem;
 	border-width: 0;
 	background-color: gray;
 	background-blend-mode: multiply;
@@ -552,13 +563,16 @@
 	border-color:rgb(205, 125, 255)
 }
 
-.Card_D {
+.Card_D, .Card_D2 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 0;
 	margin: 0;
 	margin-top: 5rem;
+}
+.Card_D2 {
+	margin-top: 10rem;
 }
 .Card_DL, .Card_DR {
 	display: flex;
@@ -575,9 +589,9 @@
 .Card_DR {
 	margin-left: 2.5rem;
 }
-.Card_T {
-	font-size: 10pt;
-	font-weight: 400;
+.Card_T, .Nodes_T {
+	font-size: 12pt;
+	font-weight: 500;
 	text-align: left;
 	color: gray;
 	z-index: 2;
@@ -591,7 +605,7 @@
 	border-radius: 10px;
 	transition: transform 0.3s ease;
 }
-.Card_P {
+.Card_P, .Nodes_P{
 	font-size: 17.5pt;
 	font-weight: 400;
 	text-align: left;
@@ -599,17 +613,19 @@
 	padding: 0;
 	margin: 0;
 }
-.Card_H1, .Card_H2, .Card_H3, .Card_H4 {
+.Card_H1, .Card_H2, .Card_H3, .Card_H4, .Card_H5, .Card_H6 {
 	font-size: 50pt;
 	font-weight: 500;
 	text-align: left;
 	margin: 0;
 	padding: 0;
+}
+.Card_H1, .Card_H2 {
 	background: linear-gradient(to bottom right, rgb(255, 35, 45), rgb(255, 135, 200));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-.Card_H2, .Card_H4 {
+.Card_H2, .Card_H4, .Card_H6 {
 	font-size: 60pt;
 	font-weight: 700;
 }
@@ -618,10 +634,103 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.Card_H5, .Card_H6 {
+	color: rgb(195, 205, 0);
+}
 .Card_Img:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
+}
+.Nodes_V {
+	position: absolute;
+	object-fit: cover;
+	width: 100%;
+	height: 45rem;
+	border-width: 0;
+	background-color: gray;
+	background-blend-mode: multiply;
+}
+.Nodes_Img {
+	z-index: 2;
+	height: 20rem;
+	border-width: 0;
+	height: fit-content;
+	border-radius: 10px;
+}
+.Nodes_D, .Nodes_D2 {
+	display: flex;
+	justify-content: start;
+	align-items: flex-start;
+	padding: 0;
+	margin: 0;
+}
+.Nodes_D {
+	flex-direction: column;
+	width: 60%;
+	margin-left: 7.5rem;
+}
+.Nodes_P {
+	z-index: 2;
+}
+.Nodes_T {
+	z-index: 2;
+}
+.Nodes_A {
+	z-index: 2;
+	margin-right: 1.5rem;
+}
+.Nodes_H1, .Nodes_H2{
+	z-index: 2;
+	font-size: 50pt;
+	font-weight: 500;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	color: rgb(0, 255, 165);
+}
+.Nodes_H2 {
+	font-size: 60pt;
+	font-weight: 700;
+}
+.Spacer {
+	text-align: center;
+	color: gray;
+	font-size: 10pt;
+	margin-top: 7.5rem;
+	margin-bottom: 7.5rem;
 }
 
+.Envelope_D {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	margin-top: 5rem;
+	padding-top: 5rem;
+	background: linear-gradient(to bottom right, rgb(160, 35, 255), rgb(100, 80, 185));
+}
+.Envelope_D2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	margin-top: 5rem;
+	margin-bottom: 5rem;
+}
+.Envelope_P, .VidSeq_P  {
+	font-size: 28pt;
+	color: rgb(215, 185, 200);
+	font-weight: 500;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.VidSeq_P {
+	color: rgb(195, 205, 0);
+}
 
 
 

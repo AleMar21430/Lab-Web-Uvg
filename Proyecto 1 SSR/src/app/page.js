@@ -1,7 +1,5 @@
-"use client"
-import { useState } from 'react'
-import styles from './page.module.css'
 import {Light_Groups, Caustics, Color_Operations} from './components.js'
+import styles from './page.module.css'
 
 export default function Home() {
 	return (
@@ -56,6 +54,8 @@ export default function Home() {
 			<p class={styles.Present_P}>Released June 8th, 2022</p>
 		</div>
 
+		<pre class={styles.Spacer}>.        .        .</pre>
+
 		<div class={styles.Whats_New_D}>
 			<p class={styles.Whats_New_P}>WHAT'S NEW IN 5 MINUTES</p>
 			<iframe class={styles.Whats_New_V} src="https://www.youtube.com/embed/TnX4_BcFY54"></iframe>
@@ -73,6 +73,8 @@ export default function Home() {
 			<p class={styles.Lightgroups_P2}>All Light Groups combined in the Compositor.</p>
 		</div>
 
+		<pre class={styles.Spacer}>.        .        .</pre>
+
 		<div class={styles.Caustics_D}>
 			<Caustics/>
 			<div class={styles.Caustics_D2}>
@@ -86,6 +88,8 @@ export default function Home() {
 			</div>
 		</div>
 
+		<pre class={styles.Spacer}>.        .        .</pre>
+
 		<div class={styles.Volume_D}>
 			<p class={styles.Volume_H}>VOLUME</p>
 			<p class={styles.Volume_H2}>MOTION BLUR</p>
@@ -97,21 +101,17 @@ export default function Home() {
 		
 		<div class={styles.Cycles_D}>
 			<p class={styles.Cycles_P}>MORE CYCLES</p>
-			<br/>
-			<a class={styles.Cycles_A} href="http://developer.blender.org/rB630d2b6">Support Adaptive Sampling with Scrambling Distance</a>
-			<a class={styles.Cycles_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#AMD_GPU_Rendering">AMD GPU Rendering for Linux</a>
-			<br/>
-			<a class={styles.Cycles_A} href="http://developer.blender.org/rB5ac4e6c">OpenColorIO color space aliases support</a>
-			<a class={styles.Cycles_A} href="http://developer.blender.org/rBf991f5a">New Linear ACEScg color space</a>
-			<br/>
-			<a class={styles.Cycles_A} href="http://developer.blender.org/rB5b4ab89">Add Alpha Output to Object Info node</a>
-			<a class={styles.Cycles_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Color_Management">Support different Color Management for Render and Viewport</a>
-			<br/>
-			<a class={styles.Cycles_A} href="http://developer.blender.org/rBae217295578">Automatically unpause viewport when switching to rendered mode</a>
-			<br/>
-			<a class={styles.Cycles_A} href="http://developer.blender.org/rBe81d7bfcc9f4">Enable Alembic procedural for final renders</a>
-			<a class={styles.Cycles_A} href="http://developer.blender.org/rB6787cc13d4ef">Support for Baking to UDIM tiles</a>
-			<br/>
+			<div class={styles.Cycles_D2}>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rB630d2b6">Support Adaptive Sampling with Scrambling Distance</a>
+				<a class={styles.Cycles_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#AMD_GPU_Rendering">AMD GPU Rendering for Linux</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rB5ac4e6c">OpenColorIO color space aliases support</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rBf991f5a">New Linear ACEScg color space</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rB5b4ab89">Add Alpha Output to Object Info node</a>
+				<a class={styles.Cycles_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Color_Management">Support different Color Management for Render and Viewport</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rBae217295578">Automatically unpause viewport when switching to rendered mode</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rBe81d7bfcc9f4">Enable Alembic procedural for final renders</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rB6787cc13d4ef">Support for Baking to UDIM tiles</a>
+			</div>
 			<a class={styles.Cycles_B} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Cycles#Volume_Motion_Blur">See all Cycles changes</a>
 		</div>
 
@@ -142,7 +142,32 @@ export default function Home() {
 			</div>
 		</div>
 
-		<div class={styles.Card_D}>
+		<div class={styles.Color_D}>
+			<div class={styles.Card_D}>
+				<img class={styles.Nodes_Img} src="./duplicate_elements_node.png"/>
+				<div class={styles.Nodes_D}>
+					<p class={styles.Nodes_T}>GEOMETRY NODES</p>
+					<p class={styles.Nodes_H1}>DUPLICATE</p>
+					<p class={styles.Nodes_H2}>ELEMENTS</p>
+					<p class={styles.Nodes_P}>This new node creates a new geometry with the specified elements (point, edge, face, spline, or instance).</p>
+					<br/>
+					<p class={styles.Nodes_P}>
+						Combined with the&nbsp;
+						<a class={styles.Color_A} href="https://docs.blender.org/manual/en/3.2/modeling/geometry_nodes/geometry/geometry_to_instance.html">Geometry to Instance</a>
+						&nbsp;Node, this can be used to create a basic efficient “Array” operation. This should be more efficient because the duplicates are instances.
+					</p>
+					<br/>
+					<br/>
+					<div class={styles.Nodes_D2}>
+						<a class={styles.Nodes_A} href="https://docs.blender.org/manual/en/3.2/grease_pencil/modifiers/generate/envelope.html">See the Manual</a>
+						<a class={styles.Nodes_A} href="https://docs.blender.org/manual/en/3.2/grease_pencil/modifiers/generate/envelope.html">See all Geometry Nodes changes</a>
+					</div>
+				</div>
+			</div>
+			<video class={styles.Nodes_V} muted loop autoPlay src="./geometry_nodes_duplicate_elements_s.mp4" type="video/mp4"></video>
+		</div>
+
+		<div class={styles.Card_D2}>
 			<video class={styles.Card_V} muted loop autoPlay src="./asset_browser_collections_s.mp4" type="video/mp4"></video>
 			<div class={styles.Card_DR}>
 				<p class={styles.Card_T}>ASSET BROWSER</p>
@@ -157,6 +182,8 @@ export default function Home() {
 			</div>
 		</div>
 
+		<pre class={styles.Spacer}>.        .        .</pre>
+
 		<div class={styles.Card_D}>
 			<div class={styles.Card_DL}>
 				<p class={styles.Card_T}>MODELING</p>
@@ -167,28 +194,59 @@ export default function Home() {
 			<video class={styles.Card_V} muted loop autoPlay src="./pentool_s.mp4" type="video/mp4"></video>
 		</div>
 
-		<div class={styles.Card_D}>
-			<video class={styles.Card_V} muted loop autoPlay src="./grease_pencil_envelope.mp4" type="video/mp4"></video>
-			<div class={styles.Card_DR}>	
-				<p class={styles.Card_T}>GREASE PENCIL</p>
-				<p class={styles.Card_H3}>ENVELOPE</p>
-				<p class={styles.Card_H4}>MODIFIER</p>
-				<p class={styles.Card_P}>This new modifier connects all points that are N points apart, a shape known as envelope.</p>
-				<br/>
-				<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/grease_pencil/modifiers/generate/envelope.html">See the Manual</a>
+		<div class={styles.Envelope_D}>
+			<div class={styles.Card_D}>
+				<video class={styles.Card_V} muted loop autoPlay src="./grease_pencil_envelope.mp4" type="video/mp4"></video>
+				<div class={styles.Card_DR}>	
+					<p class={styles.Card_T}>GREASE PENCIL</p>
+					<p class={styles.Card_H3}>ENVELOPE</p>
+					<p class={styles.Card_H4}>MODIFIER</p>
+					<p class={styles.Card_P}>This new modifier connects all points that are N points apart, a shape known as envelope.</p>
+					<br/>
+					<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/grease_pencil/modifiers/generate/envelope.html">See the Manual</a>
+				</div>
+			</div>
+			<div class={styles.Envelope_D2}>
+				<p class={styles.Envelope_P}>AND MORE</p>
+				<div class={styles.Cycles_D2}>
+					<a class={styles.Cycles_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Grease_Pencil#Modifiers_and_VFX">Build modifier improvements</a>
+					<a class={styles.Cycles_A} href="http://developer.blender.org/rBd4e1458db3a0">Improved smooth operator algorithm</a>
+					<a class={styles.Cycles_A} href="http://developer.blender.org/rBacd7a648b17a">Scale Stroke Thickness in Pie menu</a>
+					<a class={styles.Cycles_A} href="http://developer.blender.org/rBd4e1458db3a0">New “Keep Shape” option in Smooth modifier</a>
+					<a class={styles.Cycles_A} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Grease_Pencil#Modifiers_and_VFX">Dot Dash modifier improvements</a>
+					<a class={styles.Cycles_A} href="http://developer.blender.org/rB7ca13eef7c33">Improve multi-user Grease Pencil performance</a>
+					<a class={styles.Cycles_A} href="http://developer.blender.org/rBe2befa425a84">Added cache to speed up object evaluation</a>
+				</div>
+				<a class={styles.Cycles_B} href="https://wiki.blender.org/wiki/Reference/Release_Notes/3.2/Grease_Pencil">See all Grease Pencil changes</a>
 			</div>
 		</div>
 
 		<div class={styles.Card_D}>
 			<div class={styles.Card_DL}>
 				<p class={styles.Card_T}>VIDEO SEQUENCER</p>
-				<p class={styles.Card_H3}>ENHANCED</p>
-				<p class={styles.Card_H4}>CHANNELS</p>
+				<p class={styles.Card_H5}>ENHANCED</p>
+				<p class={styles.Card_H6}>CHANNELS</p>
 				<p class={styles.Card_P}>Organize your edits by giving channels a name!</p>
 				<p class={styles.Card_P}>You can also mute and lock entire channels.</p>
 			</div>
 			<img class={styles.Card_Img} src="./vse_channels.jpg"/>
 		</div>
+
+		<div class={styles.Envelope_D2}>
+			<p class={styles.VidSeq_P}>PLUS</p>
+			<div class={styles.Cycles_D2}>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rBe16ff4132e35">Add frame selected operator for preview</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rB32da64c17e9d">Better handling of animation when transforming strips</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rB17769489d920">Option to limit timeline view height</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rBb4700a13c6ab">Use float for transformation offset</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rBe49fef45cef7">Enable edge panning for transform operator</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rB1c5f2e49b7bf">Add filter method to strip transform</a>
+				<a class={styles.Cycles_A} href="http://developer.blender.org/rB2d24ba0210e3">Create new scene from VSE</a>
+			</div>
+		</div>
+
+		<pre class={styles.Spacer}>.        .        .</pre>
+
 	</body>
 	)
 }
