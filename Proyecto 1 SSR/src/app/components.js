@@ -98,8 +98,8 @@ export function Color_Operations() {
 			<p class={styles.Color_P}>Paint is now available in Sculpt mode! Taking advantage of the performance improvements you can now paint on millions of polygons.</p>
 			<p class={styles.Color_P}>
 				Check out&nbsp;
-				<a class={styles.Color_A} href="https://www.blender.org/download/demo-files/#painting">the file</a>
-				&nbsp;used on the video below.
+				<a class={styles.Color_A} href="https://www.blender.org/download/demo-files/#painting">the file used</a>
+				&nbsp;on the video below.
 			</p>
 			<ul class={styles.Color_UL}>
 			<button class={styles.Color_B} onClick={() => colorModeChange(1)}>Paint Brush
