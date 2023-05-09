@@ -405,72 +405,72 @@ export default function Home() {
 		<footer class={styles.Footer}>
 			<div class={styles.Footer_D}>
 				<div class={styles.Footer_D2}>
-					<a class={styles.Footer_A2}>Download</a>
-					<a class={styles.Footer_A}>Latest Blender</a>
-					<a class={styles.Footer_A}>Blender LTS</a>
-					<a class={styles.Footer_A}>Blender</a>
-					<a class={styles.Footer_A}>Benchmark</a>
-					<a class={styles.Footer_A}>Previous Version</a>
-					<a class={styles.Footer_A}>Experimental</a>
-					<a class={styles.Footer_A}>Builds</a>
-					<a class={styles.Footer_A}>Source Code</a>
-					<a class={styles.Footer_A}>Release Notes</a>
-					<a class={styles.Footer_A}>Requirements</a>
-					<a class={styles.Footer_A2}>Organization</a>
-					<a class={styles.Footer_A}>People</a>
-					<a class={styles.Footer_A}>Jobs</a>
+					<a class={styles.Footer_A2} href=''>Download</a>
+					<a class={styles.Footer_A} href=''>Latest Blender</a>
+					<a class={styles.Footer_A} href=''>Blender LTS</a>
+					<a class={styles.Footer_A} href=''>Blender</a>
+					<a class={styles.Footer_A} href=''>Benchmark</a>
+					<a class={styles.Footer_A} href=''>Previous Version</a>
+					<a class={styles.Footer_A} href=''>Experimental</a>
+					<a class={styles.Footer_A} href=''>Builds</a>
+					<a class={styles.Footer_A} href=''>Source Code</a>
+					<a class={styles.Footer_A} href=''>Release Notes</a>
+					<a class={styles.Footer_A} href=''>Requirements</a>
+					<a class={styles.Footer_A2} href=''>Organization</a>
+					<a class={styles.Footer_A} href=''>People</a>
+					<a class={styles.Footer_A} href=''>Jobs</a>
 				</div>
 				<div class={styles.Footer_D2}>
-					<a class={styles.Footer_A2}>About</a>
-					<a class={styles.Footer_A}>Blender</a>
-					<a class={styles.Footer_A}>Foundation</a>
-					<a class={styles.Footer_A}>Blender Institute</a>
-					<a class={styles.Footer_A}>Blender Studio</a>
-					<a class={styles.Footer_A}>License</a>
-					<a class={styles.Footer_A}>Logo & Trademark</a>
-					<a class={styles.Footer_A}>Credits</a>
-					<a class={styles.Footer_A}>Privacy Policy</a>
-					<a class={styles.Footer_A2}>Articles</a>
-					<a class={styles.Footer_A}>News</a>
-					<a class={styles.Footer_A}>Press Releases</a>
-					<a class={styles.Footer_A}>User Stories</a>
+					<a class={styles.Footer_A2} href=''>About</a>
+					<a class={styles.Footer_A} href=''>Blender</a>
+					<a class={styles.Footer_A} href=''>Foundation</a>
+					<a class={styles.Footer_A} href=''>Blender Institute</a>
+					<a class={styles.Footer_A} href=''>Blender Studio</a>
+					<a class={styles.Footer_A} href=''>License</a>
+					<a class={styles.Footer_A} href=''>Logo & Trademark</a>
+					<a class={styles.Footer_A} href=''>Credits</a>
+					<a class={styles.Footer_A} href=''>Privacy Policy</a>
+					<a class={styles.Footer_A2} href=''>Articles</a>
+					<a class={styles.Footer_A} href=''>News</a>
+					<a class={styles.Footer_A} href=''>Press Releases</a>
+					<a class={styles.Footer_A} href=''>User Stories</a>
 				</div>
 				<div class={styles.Footer_D2}>
-					<a class={styles.Footer_A2}>Get Involved</a>
-					<a class={styles.Footer_A}>Dashboard</a>
-					<a class={styles.Footer_A}>Development</a>
-					<a class={styles.Footer_A}>Documentation</a>
-					<a class={styles.Footer_A}>Education</a>
-					<a class={styles.Footer_A2}>Donate</a>
-					<a class={styles.Footer_A}>Development Fund</a>
-					<a class={styles.Footer_A}>Education</a>
-					<a class={styles.Footer_A}>Donations</a>
-					<a class={styles.Footer_A2}>Blender Studio</a>
-					<a class={styles.Footer_A}>Films</a>
-					<a class={styles.Footer_A}>Training</a>
+					<a class={styles.Footer_A2} href=''>Get Involved</a>
+					<a class={styles.Footer_A} href=''>Dashboard</a>
+					<a class={styles.Footer_A} href=''>Development</a>
+					<a class={styles.Footer_A} href=''>Documentation</a>
+					<a class={styles.Footer_A} href=''>Education</a>
+					<a class={styles.Footer_A2} href=''>Donate</a>
+					<a class={styles.Footer_A} href=''>Development Fund</a>
+					<a class={styles.Footer_A} href=''>Education</a>
+					<a class={styles.Footer_A} href=''>Donations</a>
+					<a class={styles.Footer_A2} href=''>Blender Studio</a>
+					<a class={styles.Footer_A} href=''>Films</a>
+					<a class={styles.Footer_A} href=''>Training</a>
 				</div>
 				<div class={styles.Footer_D2}>
-					<a class={styles.Footer_A2}>Developers</a>
-					<a class={styles.Footer_A}>Get Started</a>
-					<a class={styles.Footer_A}>Projects</a>
-					<a class={styles.Footer_A}>Docs</a>
-					<a class={styles.Footer_A}>Blog</a>
-					<a class={styles.Footer_A}>Forum</a>
-					<a class={styles.Footer_A}>Python API</a>
-					<a class={styles.Footer_A2}>Support</a>
-					<a class={styles.Footer_A}>Manual</a>
-					<a class={styles.Footer_A}>Community</a>
-					<a class={styles.Footer_A}>FAQ</a>
-					<a class={styles.Footer_A2}>Blender Conference</a>
+					<a class={styles.Footer_A2} href=''>Developers</a>
+					<a class={styles.Footer_A} href=''>Get Started</a>
+					<a class={styles.Footer_A} href=''>Projects</a>
+					<a class={styles.Footer_A} href=''>Docs</a>
+					<a class={styles.Footer_A} href=''>Blog</a>
+					<a class={styles.Footer_A} href=''>Forum</a>
+					<a class={styles.Footer_A} href=''>Python API</a>
+					<a class={styles.Footer_A2} href=''>Support</a>
+					<a class={styles.Footer_A} href=''>Manual</a>
+					<a class={styles.Footer_A} href=''>Community</a>
+					<a class={styles.Footer_A} href=''>FAQ</a>
+					<a class={styles.Footer_A2} href=''>Blender Conference</a>
 				</div>
 				<div class={styles.Footer_D2}>
-					<a class={styles.Footer_A2}>Follow Blender</a>
-					<a>Youtube</a>
-					<a>Twitter</a>
-					<a>Instagram</a>
-					<a>Facebook</a>
-					<a>Likedin</a>
-					<a>Mastodon</a>
+					<a class={styles.Footer_A2} href=''>Follow Blender</a>
+					<a class={styles.Footer_A3} href=''>Youtube</a>
+					<a class={styles.Footer_A3} href=''>Twitter</a>
+					<a class={styles.Footer_A3} href=''>Instagram</a>
+					<a class={styles.Footer_A3} href=''>Facebook</a>
+					<a class={styles.Footer_A3} href=''>Likedin</a>
+					<a class={styles.Footer_A3} href=''>Mastodon</a>
 				</div>
 			</div>
 			<div>

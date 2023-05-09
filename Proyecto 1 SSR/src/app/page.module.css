@@ -1099,12 +1099,24 @@
 	color: rgb(140,140,145);
 	font-size: 10.5pt;
 	font-weight: 400;
+	text-decoration: none;
 }
 .Footer_A2 {
 	margin-top: 0.5rem;
 	color: rgb(195,195,200);
 	font-size: 10.5pt;
 	font-weight: 700;
+	text-decoration: none;
+}
+.Footer_A3 {
+	margin-top: 0.5rem;
+	color: rgb(140,140,145);
+	font-size: 14pt;
+	font-weight: 400;
+	text-decoration: none;
+}
+.Footer_A:hover, .Footer_A2:hover, .Footer_A3:hover {
+	text-decoration: underline;
 }
 
 
@@ -1127,8 +1139,6 @@
 }
 /*Half-Screen*/
 @media (min-width:600px) {
-
-
 	.Caustics_D{
 		padding-left: 2.5%;
 	}
@@ -1145,8 +1155,6 @@
 }
 /*Fullscreen*/
 @media (min-width:1200px) {
-
-
 	.Caustics_D{
 		padding-left: 20%;
 	}
