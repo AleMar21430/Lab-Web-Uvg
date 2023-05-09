@@ -981,10 +981,32 @@
 		width: 30rem;
 	}
 }
-.More_P {
+.More_D5 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	width: 95%;
+}
+.More_P, .More_P2 {
 	text-align: center;
-	font-size: 13pt;
+	font-size: 12.5pt;
 	color: rgb(175,185,195);
+}
+.More_P2 {
+	width: 95%;
+}
+@media (min-width:600px) {
+	.More_P2 {
+		width: 75%;
+	}
+}
+@media (min-width:1200px) {
+	.More_P2 {
+		width: 60%;
+	}
 }
 .More_H {
 	color: rgb(215, 225, 235);

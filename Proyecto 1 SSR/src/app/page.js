@@ -355,7 +355,7 @@ export default function Home() {
 			<img class={styles.Card_Img} src='./oksana-dobrovolska-s.jpg'/>
 		</div>
 
-		<div class={styles.More_D2}>
+		<div class={styles.More_D5}>
 			<p class={styles.More_H}>Credits</p>
 			<p class={styles.More_P}>
 				<a class={styles.More_P} href='https://www.blender.org/about/credits/'>List of developers</a>
@@ -366,7 +366,7 @@ export default function Home() {
 				&nbsp;by&nbsp;
 				<a class={styles.More_P} href=''>Oksana Dobrovolska.</a>
 			</p>
-			<p class={styles.More_P}>
+			<p class={styles.More_P2}>
 				Page design and layout by&nbsp;
 				<a class={styles.More_P} href=''>Pablo Vazquez.</a>
 				&nbsp;Features video by &nbsp;
@@ -396,9 +396,9 @@ export default function Home() {
 				<p class={styles.More_P}>Releases are possible thanks to the members of the Development Fund.</p>
 				<p class={styles.More_P}>
 					Join today and help to ensure the future of Blender for&nbsp;
-					<a>$6/month</a>
+					<a class={styles.More_P} href=''>$6/month</a>
 				</p>
-				<a class={styles.Volume_A} href='https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html'>Join the Blender Development Fund</a>
+				<a class={styles.Volume_A} href='https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html'>Join the Blender Development Fund ❤️</a>
 			</div>
 		</div>
 
@@ -474,7 +474,7 @@ export default function Home() {
 				</div>
 			</div>
 			<div>
-				<p class={styles.More_P}>Artistic freedom starts with Blender  The Free and Open Source 3D Creation Suite</p>
+				<p class={styles.More_P}>Artistic freedom starts with Blender ♡ The Free and Open Source 3D Creation Suite</p>
 			</div>
 		</footer>
 	</body>
