@@ -100,7 +100,7 @@
 }
 .Sub_Header {
 	position: sticky;
-	z-index: 2;
+	z-index: 4;
 	top: 0;
 }
 .Sub_Header_Link, .Sub_Header_Link_Selected {
@@ -605,8 +605,8 @@
 	border-radius: 10px;
 	transition: transform 0.3s ease;
 }
-.Card_P, .Nodes_P{
-	font-size: 17.5pt;
+.Card_P, .Nodes_P, .Artwork_P {
+	font-size: 15pt;
 	font-weight: 400;
 	text-align: left;
 	z-index: 2;
@@ -627,6 +627,10 @@
 }
 .Card_H2, .Card_H4, .Card_H6 {
 	font-size: 60pt;
+	font-weight: 700;
+}
+.Card_H7 {
+	font-size: 30pt;
 	font-weight: 700;
 }
 .Card_H3, .Card_H4 {
@@ -730,6 +734,61 @@
 }
 .VidSeq_P {
 	color: rgb(195, 205, 0);
+}
+
+.Artwork_Img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	object-fit: cover;
+	width: 100%;
+	height: 35rem;
+	border-width: 0;
+	background-image: url("../../public/oksana-dobrovolska-s.jpg");
+	background-color: gray;
+	background-blend-mode: multiply;
+}
+.Artwork_D {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgb(45, 45, 50);
+	margin: 0;
+	padding: 0;
+}
+.Footer_D {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0;
+}
+.Footer_D2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0 1rem 0 1rem;
+}
+.Footer_A {
+	color: rgb(140,140,145);
+	font-size: 10.5pt;
+	font-weight: 400;
+}
+.Footer_A2 {
+	margin-top: 0.5rem;
+	color: rgb(195,195,200);
+	font-size: 10.5pt;
+	font-weight: 700;
 }
 
 

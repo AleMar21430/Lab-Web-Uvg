@@ -247,6 +247,200 @@ export default function Home() {
 
 		<pre class={styles.Spacer}>.        .        .</pre>
 
+		<div>
+			<p>BUT WAIT, THERE’S MORE</p>
+			<div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+					<li>Shader improvements</li>
+					<li>Show compilation progress in the 3D Viewport</li>
+					<li>Bump node optimization</li>
+					<li>Tangent Vector displacement now matches Cycles</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+			</div>
+			<div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+				<div>
+					<p>EEVEE</p>
+					<li>Displacement bump improvements</li>
+				</div>
+			</div>
+			<p>Read the full list of changes at&nbsp;
+				<a>wiki.blender.org</a>
+			</p>
+			<p>A corrective release was published on August 3, 2022 See the list of fixes at&nbsp;
+				<a>wiki.blender.org</a>
+			</p>
+		</div>
+
+		<div class={styles.Artwork_Img}>
+			<div class={styles.Card_DL}>
+				<p class={styles.Card_H7}>GET THE ARTWORK</p>
+				<p class={styles.Card_P}>Blender splash artwork source files are available for you to play with, not only for Blender 3.2 version but for&nbsp;
+					<a>previous versions as well.</a>
+				</p>
+				<br/>
+				<a class={styles.Cycles_B} href="https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html">Download .blend File</a>
+			</div>
+			<img class={styles.Card_Img} src="./oksana-dobrovolska-s.jpg"/>
+		</div>
+
+		<div>
+			<p>Credits</p>
+			<p>
+				<a>List of developers</a>
+				&nbsp;that contributed to Blender 3.2
+			</p>
+			<p>
+				<a>Blender 3.2 splash</a>
+				&nbsp;by&nbsp;
+				<a>Oksana Dobrovolska.</a>
+			</p>
+			<p>
+				Page design and layout by&nbsp;
+				<a>Pablo Vazquez.</a>
+				&nbsp;Features video by &nbsp;
+				<a>SouthernShotty.</a>
+				&nbsp;Barcelona Pavillion by&nbsp;
+				<a>eMirage.</a>
+				&nbsp;Sprite Fright by&nbsp;
+				<a>Blender Studio.</a>
+				&nbsp;Sculpt Paint demo by&nbsp;
+				<a>Ramil Roosileht.</a>
+				&nbsp;Remesh and Mask demo by&nbsp;
+				<a>Daniel Bystedt.</a>
+				&nbsp;Geometry Nodes by&nbsp;
+				<a>Simon Thommes.</a>
+				&nbsp;Asset Collection demo by&nbsp;
+				<a>Flavio Della Tommasa.</a>
+				&nbsp;Grease Pencil envelope modifier artwork by&nbsp;
+				<a>Brain Graft.</a>
+				&nbsp;Additional help by Blender Institute and the Blender community.
+			</p>
+			<p>Huge thanks to everyone involved ♥</p>
+		</div>
+
+		<div>
+			<p>Blender is and will always remain free, forever.</p>
+			<p>Releases are possible thanks to the members of the Development Fund.</p>
+			<p>
+				Join today and help to ensure the future of Blender for&nbsp;
+				<a>$6/month</a>
+			</p>
+			<a class={styles.Volume_A} href="https://docs.blender.org/manual/en/3.2/sculpt_paint/sculpting/tool_settings/remesh.html">Join the Blender Development Fund</a>
+		</div>
+
+		<footer class={styles.Footer}>
+			<div class={styles.Footer_D}>
+				<div class={styles.Footer_D2}>
+					<a class={styles.Footer_A2}>Download</a>
+					<a class={styles.Footer_A}>Latest Blender</a>
+					<a class={styles.Footer_A}>Blender LTS</a>
+					<a class={styles.Footer_A}>Blender</a>
+					<a class={styles.Footer_A}>Benchmark</a>
+					<a class={styles.Footer_A}>Previous Version</a>
+					<a class={styles.Footer_A}>Experimental</a>
+					<a class={styles.Footer_A}>Builds</a>
+					<a class={styles.Footer_A}>Source Code</a>
+					<a class={styles.Footer_A}>Release Notes</a>
+					<a class={styles.Footer_A}>Requirements</a>
+					<a class={styles.Footer_A2}>Organization</a>
+					<a class={styles.Footer_A}>People</a>
+					<a class={styles.Footer_A}>Jobs</a>
+				</div>
+				<div class={styles.Footer_D2}>
+					<a class={styles.Footer_A2}>About</a>
+					<a class={styles.Footer_A}>Blender</a>
+					<a class={styles.Footer_A}>Foundation</a>
+					<a class={styles.Footer_A}>Blender Institute</a>
+					<a class={styles.Footer_A}>Blender Studio</a>
+					<a class={styles.Footer_A}>License</a>
+					<a class={styles.Footer_A}>Logo & Trademark</a>
+					<a class={styles.Footer_A}>Credits</a>
+					<a class={styles.Footer_A}>Privacy Policy</a>
+					<a class={styles.Footer_A2}>Articles</a>
+					<a class={styles.Footer_A}>News</a>
+					<a class={styles.Footer_A}>Press Releases</a>
+					<a class={styles.Footer_A}>User Stories</a>
+				</div>
+				<div class={styles.Footer_D2}>
+					<a class={styles.Footer_A2}>Get Involved</a>
+					<a class={styles.Footer_A}>Dashboard</a>
+					<a class={styles.Footer_A}>Development</a>
+					<a class={styles.Footer_A}>Documentation</a>
+					<a class={styles.Footer_A}>Education</a>
+					<a class={styles.Footer_A2}>Donate</a>
+					<a class={styles.Footer_A}>Development Fund</a>
+					<a class={styles.Footer_A}>Education</a>
+					<a class={styles.Footer_A}>Donations</a>
+					<a class={styles.Footer_A2}>Blender Studio</a>
+					<a class={styles.Footer_A}>Films</a>
+					<a class={styles.Footer_A}>Training</a>
+				</div>
+				<div class={styles.Footer_D2}>
+					<a class={styles.Footer_A2}>Developers</a>
+					<a class={styles.Footer_A}>Get Started</a>
+					<a class={styles.Footer_A}>Projects</a>
+					<a class={styles.Footer_A}>Docs</a>
+					<a class={styles.Footer_A}>Blog</a>
+					<a class={styles.Footer_A}>Forum</a>
+					<a class={styles.Footer_A}>Python API</a>
+					<a class={styles.Footer_A2}>Support</a>
+					<a class={styles.Footer_A}>Manual</a>
+					<a class={styles.Footer_A}>Community</a>
+					<a class={styles.Footer_A}>FAQ</a>
+					<a class={styles.Footer_A2}>Blender Conference</a>
+				</div>
+				<div class={styles.Footer_D2}>
+					<a class={styles.Footer_A2}>Follow Blender</a>
+					<a>Youtube</a>
+					<a>Twitter</a>
+					<a>Instagram</a>
+					<a>Facebook</a>
+					<a>Likedin</a>
+					<a>Mastodon</a>
+				</div>
+			</div>
+			<div>
+				<p>Artistic freedom starts with Blender  The Free and Open Source 3D Creation Suite</p>
+			</div>
+		</footer>
 	</body>
 	)
 }
