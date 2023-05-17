@@ -5,13 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAG8yR3kxzr6xUo1fk18zrce0zravE2Rko",
-  authDomain: "proyecto-itsi.firebaseapp.com",
-  databaseURL: "https://proyecto-itsi-default-rtdb.firebaseio.com",
-  projectId: "proyecto-itsi",
-  storageBucket: "proyecto-itsi.appspot.com",
-  messagingSenderId: "752717319759",
-  appId: "1:752717319759:web:63355f56be51d994b8a43a"
+  apiKey: "AIzaSyCF2BobbDoQWxTeHKoUkxVLv4IL93BRpEY",
+  authDomain: "itsi-react-next.firebaseapp.com",
+  databaseURL: "https://itsi-react-next-default-rtdb.firebaseio.com",
+  projectId: "itsi-react-next",
+  storageBucket: "itsi-react-next.appspot.com",
+  messagingSenderId: "938275106431",
+  appId: "1:938275106431:web:79c551d2ca75daf054594a"
 };
 
 // Initialize Firebase
