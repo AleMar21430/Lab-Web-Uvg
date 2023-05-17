@@ -20,17 +20,9 @@ export default defineConfig({
         replacement: resolve(__dirname, './src/context')
       },
       {
-        find:'@API',
-        replacement: resolve(__dirname, './src/data')
+        find:'@routers',
+        replacement: resolve(__dirname, './src/routers')
       },
-      {
-        find: '@utils',
-        replacement: resolve(__dirname, './src/utils')
-      },
-      {
-        find: '@img',
-        replacement: resolve(__dirname, './src/img')
-      }
     ]
   }
 })
