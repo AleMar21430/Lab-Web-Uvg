@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import './SignIn.css'
 import {useAuth} from './../../context/AuthContext'
-import { Link, useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 
 const hoverButtons = {
 	'&:hover':{
@@ -33,7 +33,7 @@ export default function SignIn() {
 	const [emailError, setEmailError] = useState("")
 	const [emailValidation, setEmailValidation] = useState(false)
 
-	const navigate = useNavigate()
+	const navigate = useRouter()
 	
 	const validateEmail = (email) => {
 		const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -54,7 +54,7 @@ export default function SignIn() {
 
 		try {
 		await auth.signUp(emailRegister, passwordRegister)
-		navigate("/")
+		navigate.route("/")
 		} catch (error) {
 		if(error.code === "auth/email-already-in-use"){
 			setEmailError("Usuario (correo) ya utilizado")
@@ -67,7 +67,7 @@ export default function SignIn() {
 		e.preventDefault()
 		try {
 		await auth.logInWithGoogle()
-		navigate("/")
+		navigate.route("/")
 		
 		} catch (error) {
 		return

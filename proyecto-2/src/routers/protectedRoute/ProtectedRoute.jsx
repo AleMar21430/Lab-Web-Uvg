@@ -1,16 +1,15 @@
-import {useAuth} from './../../context/AuthContext'
-import {Navigate, useLocation} from 'react-router-dom'
+import { useRouter } from 'next/navigation'
+import { useAuth } from '../../context/AuthContext'
 
 export default function ProtectedRoute ({children}) {
 	const {user} = useAuth()
-	const location = useLocation()
-	if(!user){
-		if (location.pathname === "/signIn") {
-			return <>{children}</>
-		}
-		else {
-			return <Navigate to={"/logIn"}></Navigate>
+	const router = useRouter()
+
+	if (!user) {
+		if (router.pathname !== '/signIn') {
+			router.push('/logIn')
 		}
 	}
+
 	return <>{children}</>
 }
