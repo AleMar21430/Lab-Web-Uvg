@@ -1,9 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import GoogleIcon from '@mui/icons-material/Google'
 import './SignIn.css'
-import {useAuth} from '@authentication/AuthContext'
+import {useAuth} from './../../context/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 
 const hoverButtons = {
@@ -78,20 +77,20 @@ export default function SignIn() {
 		<div className="Box">
 		<div className="register-container">
 			<form>
-				<h1 className="tittle">Registrarse</h1>
-				<Stack spacing={3} direction="column">
-					<TextField id="email" type="email" variant="outlined" label="Correo electronico" onChange={(e) => setEmailRegister(e.target.value)} error={emailValidation} helperText={emailError}/>
-					<TextField id="password" type="password" variant="outlined" label="Contraseña" onChange={(e) => setPasswordRegister(e.target.value)} error={passwordValidation} helperText={passwordError}/>
-					<Button sx={hoverButtons} type="submit" variant="outlined" onClick={(e) => handleRegister(e)}>
+				<h1 className="title">Registrarse</h1>
+				<div>
+					<input id="email" type="email" label="Correo electrónico" onChange={(e) => setEmailRegister(e.target.value)} error={emailValidation} helperText={emailError}/>
+					<input id="password" type="password" label="Contraseña" onChange={(e) => setPasswordRegister(e.target.value)} error={passwordValidation} helperText={passwordError}/>
+					<button onClick={(e) => handleRegister(e)}>
 						Registrase
-					</Button>
-					<Button sx={hoverButtons} startIcon={<GoogleIcon sx={firstIcon}/>} variant="outlined" onClick={(e) => handleGoogle(e)} type="submit">
+					</button>
+					<button onClick={(e) => handleGoogle(e)}>
 						Registrase con Google
-					</Button>
-				</Stack>
+					</button>
+				</div>
 				<p className="account-text">
 					¿Ya tienes cuenta?
-					<Link to="/logIn" className="logIn-text">LogIn</Link>
+					<a href="/logIn" className="logIn-text">LogIn</a>
 				</p>
 			</form>
 		</div>

@@ -1,5 +1,7 @@
+'use client'
+
 import React from 'react'
-import {useAuth} from '@authentication/AuthContext'
+import {useAuth} from './../../context/AuthContext'
 import styles from './Home.module.css'
 
 const Home = () => {

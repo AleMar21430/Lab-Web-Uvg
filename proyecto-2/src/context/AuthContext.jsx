@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect } from 'react'
-import { auth } from '../Firebase/fb'
+import { auth } from '.././Firebase/fb'
 import { createContext, useContext } from 'react'
 import { 
   createUserWithEmailAndPassword,
