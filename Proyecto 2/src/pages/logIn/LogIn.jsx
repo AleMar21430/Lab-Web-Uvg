@@ -41,7 +41,7 @@ const LogIn = () => {
 		e.preventDefault()
 		
 		try {
-		await auth.logIn(email, password)  
+		await auth.logIn(email, password)
 		navigate("/")
 		} catch (error) {
 		if(error.code === "auth/user-not-found"){
@@ -56,7 +56,7 @@ const LogIn = () => {
 		e.preventDefault()
 		try{
 		await auth.logInWithGoogle()
-		navigate("/")    
+		navigate("/")
 		}catch (error) {
 		return
 		}

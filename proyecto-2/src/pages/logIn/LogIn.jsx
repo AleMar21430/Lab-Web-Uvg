@@ -34,7 +34,6 @@ const LogIn = () => {
 		}
 	}
 	const handleGoogle = async (e) => {
-		console.log("WTF")
 		e.preventDefault()
 		try{
 		await auth.logInWithGoogle()
@@ -52,10 +51,10 @@ const LogIn = () => {
 				<div>
 					<input id="email" type="email" label="Correo electrónico" onChange={(e) => setEmail(e.target.value)} error={emailValidation} helperText={emailErrorMessage}/>
 					<input id="password" type="password" label="Contraseña" onChange={(e) => setPassword(e.target.value)} error={passwordValidation} helperText={passwordErrorMessage}/>
-					<button onClick={(e) => handleLogIn(e)}>
+					<button type="submit" onclick={(e) => handleLogIn(e)}>
 						Iniciar Sesión
 					</button>
-					<button onClick={(e) => handleGoogle(e)}>
+					<button type="submit" onclick={(e) => handleGoogle(e)}>
 						Iniciar Sesión con Google
 					</button>
 				</div>

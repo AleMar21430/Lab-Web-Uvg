@@ -20,12 +20,15 @@ export default function Routing() {
 					</ProtectedRoute>
 					}>
 				</Route>
-				<Route path="/logIn" element={<LogIn/>}></Route>
+				<Route path="/logIn" element={
+					<LogIn/>
+					}>
+				</Route>
 				<Route path="/signIn" element={
-						<ProtectedRoute>
-							<SignIn/>
-						</ProtectedRoute>
-						}>
+					<ProtectedRoute>
+						<SignIn/>
+					</ProtectedRoute>
+					}>
 				</Route>
 			</Routes>
 		</BrowserRouter>
