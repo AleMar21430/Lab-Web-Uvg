@@ -1,4 +1,13 @@
 {
+  "targets": {
+    "itsi-project": {
+      "hosting": {
+        "ITSI-Project": [
+          "itsi-project"
+        ]
+      }
+    }
+  },
   "projects": {
     "default": "itsi-project"
   }

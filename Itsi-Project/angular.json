@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Itsi-Project": {
+    "ITSI-Project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Itsi-Project:build:production"
+              "browserTarget": "ITSI-Project:build:production"
             },
             "development": {
-              "browserTarget": "Itsi-Project:build:development"
+              "browserTarget": "ITSI-Project:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Itsi-Project:build"
+            "browserTarget": "ITSI-Project:build"
           }
         },
         "test": {
@@ -102,6 +102,16 @@
               "src/styles.sass"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ITSI-Project:build:production",
+            "firebaseProject": "itsi-project",
+            "firebaseHostingSite": "itsi-project"
           }
         }
       }
