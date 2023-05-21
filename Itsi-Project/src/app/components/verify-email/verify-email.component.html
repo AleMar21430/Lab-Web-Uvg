@@ -5,16 +5,16 @@
 
 			<div class="formGroup" *ngIf="authService.userData as user">
 				<p class="text-center">
-					Enviamos un correo de verificacion a: 
+					Enviamos un correo de verificación a: 
 					<strong>{{ user.email }}</strong>.
 				</p>
-				<p class="text-center">Please check your email and click on the link to verfiy your email address.</p>
+				<p class="text-center">Revisa tu correo y usa el link para recuperar tu contraseña.</p>
 			</div>
 
 			<div class="formGroup">
 				<button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
 					<i class="fas fa-redo-alt"></i>
-					Resend Verification Email
+					Reenviar Correo de verificación
 				</button>
 			</div>
 		</div>
