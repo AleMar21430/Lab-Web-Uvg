@@ -1,20 +1,22 @@
-<div class="Block">
-	<h3>Ingresar</h3>
+<main>
+	<div class="Block">
+		<h3>Ingresar</h3>
 
-	<div class="Separator"></div>
+		<div class="Separator"></div>
 
-	<input type="text" placeholder="Correo" #userName required/>
-	<input type="password" placeholder="Contraseña" #userPassword required/>
+		<input type="text" placeholder="Correo" #userName required/>
+		<input type="password" placeholder="Contraseña" #userPassword required/>
 
-	<div class="Separator"></div>
+		<div class="Separator"></div>
 
-	<button type="button" (click)="authService.SignIn(userName.value, userPassword.value)">Inicar Sesión</button>
-	<button type="button" (click)="authService.GoogleAuth()">Ingresar con Google</button>
+		<button type="button" (click)="authService.SignIn(userName.value, userPassword.value)">Inicar Sesión</button>
+		<button type="button" (click)="authService.GoogleAuth()">Ingresar con Google</button>
 
-	<div class="Separator"></div>
+		<div class="Separator"></div>
 
-	<p class="Link" routerLink="/forgot-password">¿Olvidaste tu contraseña?</p>
-	<p>¿No tienes una cuenta?</p>
-	<p class="Link" routerLink="/register-user">Regístrate</p>
-	
-</div>
+		<p class="Link" routerLink="/forgot-password">¿Olvidaste tu contraseña?</p>
+		<p>¿No tienes una cuenta?</p>
+		<p class="Link" routerLink="/register-user">Regístrate</p>
+		
+	</div>
+</main>

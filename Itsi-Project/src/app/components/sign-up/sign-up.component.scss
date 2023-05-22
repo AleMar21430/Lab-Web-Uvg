@@ -1,6 +1,6 @@
 .Block {
-	min-width: 20rem;
-	min-height: 60vh;
+	width: 20rem;
+	height: 60vh;
 	padding: 20px;
 	background: rgb(50,50,50);
 	display: flex;
@@ -44,4 +44,5 @@ button:hover {
 
 .Separator {
 	height: 2rem;
+	background: transparent;
 }

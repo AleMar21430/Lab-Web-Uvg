@@ -1,18 +1,20 @@
-<div class="Block">
-	<h3>Registrate</h3>
+<main>
+	<div class="Block">
+		<h3>Registrate</h3>
 
-	<div class="Separator"></div>
+		<div class="Separator"></div>
 
-	<input type="email" placeholder="Correo electrónico" #userEmail required />
-	<input type="password" placeholder="Contraseña" #userPwd required/>
+		<input type="email" placeholder="Correo electrónico" #userEmail required />
+		<input type="password" placeholder="Contraseña" #userPwd required/>
 
-	<div class="Separator"></div>
-	
-	<button type="button" (click)="authService.SignUp(userEmail.value, userPwd.value)">Registrate</button>
-	<button type="button" (click)="authService.GoogleAuth()">Continúa con Google</button>
+		<div class="Separator"></div>
+		
+		<button type="button" (click)="authService.SignUp(userEmail.value, userPwd.value)">Registrate</button>
+		<button type="button" (click)="authService.GoogleAuth()">Continúa con Google</button>
 
-	<div class="Separator"></div>
+		<div class="Separator"></div>
 
-	<p>¿Ya tienes una cuenta?</p>
-	<p class="Link" routerLink="/sign-in">Ingresa Aquí</p>
-</div>
+		<p>¿Ya tienes una cuenta?</p>
+		<p class="Link" routerLink="/sign-in">Ingresa Aquí</p>
+	</div>
+</main>

@@ -1,15 +1,17 @@
-<div class="Block">
-	<div class="Sidebar">
-		<p class="Nav">User Profile</p>
-		<p class="Nav" (click)="authService.SignOut()">Log out</p>
-	</div>
+<main>
+	<div class="Block">
+		<div class="Sidebar">
+			<p class="Nav">User Profile</p>
+			<p class="Nav" (click)="authService.SignOut()">Log out</p>
+		</div>
 
-	<div class="Body">
-		<div class="Welcome" *ngIf="authService.userData as user">
-				<h3>Bienvenido! {{(user.displayName) ? user.displayName : 'User'}}</h3>
-				<!-- <p>User ID: <strong>{{user.uid}}</strong></p>
-				<p>Email: <strong>{{user.email}}</strong></p>
-				<p>Email Verified: <strong>{{user.emailVerified}}</strong></p> -->
+		<div class="Body">
+			<div class="Welcome" *ngIf="authService.userData as user">
+					<h3>Bienvenido! {{(user.displayName) ? user.displayName : 'User'}}</h3>
+					<!-- <p>User ID: <strong>{{user.uid}}</strong></p>
+					<p>Email: <strong>{{user.email}}</strong></p>
+					<p>Email Verified: <strong>{{user.emailVerified}}</strong></p> -->
+			</div>
 		</div>
 	</div>
-</div>
+</main>
