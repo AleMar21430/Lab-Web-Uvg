@@ -1,38 +1,20 @@
-<div class="displayTable">
-	<div class="displayTableCell">
-		<div class="authBlock">
-			<h3>Ingresar</h3>
-			<div class="formGroup">
-				<input type="text" class="formControl" placeholder="Correo" #userName required/>
-			</div>
+<div class="Block">
+	<h3>Ingresar</h3>
 
-			<div class="formGroup">
-				<input type="password" class="formControl" placeholder="Contraseña" #userPassword required/>
-			</div>
+	<div class="Separator"></div>
 
-			<div class="formGroup">
-				<input ntype="button" class="btn btnPrimary" value="Inicar Sesión" (click)="authService.SignIn(userName.value, userPassword.value)"/>
-			</div>
+	<input type="text" placeholder="Correo" #userName required/>
+	<input type="password" placeholder="Contraseña" #userPassword required/>
 
-			<div class="formGroup">
-				<span class="or"><span class="orInner">O</span></span>
-			</div>
+	<div class="Separator"></div>
 
-			<div class="formGroup">
-				<button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-					<i class="fab fa-google-plus-g"></i>
-					Ingresar con Google
-				</button>
-			</div>
+	<button type="button" (click)="authService.SignIn(userName.value, userPassword.value)">Inicar Sesión</button>
+	<button type="button" (click)="authService.GoogleAuth()">Ingresar con Google</button>
 
-			<div class="forgotPassword">
-				<span routerLink="/forgot-password">¿Olvidaste tu contraseña?</span>
-			</div>
-		</div>
+	<div class="Separator"></div>
 
-		<div class="redirectToLogin">
-			<p>¿No tienes una cuenta?</p>
-			<span class="redirect" routerLink="/register-user">Regístrate</span>
-		</div>
-	</div>
+	<p class="Link" routerLink="/forgot-password">¿Olvidaste tu contraseña?</p>
+	<p>¿No tienes una cuenta?</p>
+	<p class="Link" routerLink="/register-user">Regístrate</p>
+	
 </div>

@@ -1,35 +1,18 @@
-<div class="displayTable">
-	<div class="displayTableCell">
-		<div class="authBlock">
-			<h3>Registrate</h3>
+<div class="Block">
+	<h3>Registrate</h3>
 
-			<div class="formGroup">
-				<input type="email" class="formControl" placeholder="Correo electrónico" #userEmail required />
-			</div>
+	<div class="Separator"></div>
 
-			<div class="formGroup">
-				<input type="password" class="formControl" placeholder="Contraseña" #userPwd required/>
-			</div>
+	<input type="email" placeholder="Correo electrónico" #userEmail required />
+	<input type="password" placeholder="Contraseña" #userPwd required/>
 
-			<div class="formGroup">
-				<input type="button" class="btn btnPrimary" value="Registrate" (click)="authService.SignUp(userEmail.value, userPwd.value)"/>
-			</div>
+	<div class="Separator"></div>
+	
+	<button type="button" (click)="authService.SignUp(userEmail.value, userPwd.value)">Registrate</button>
+	<button type="button" (click)="authService.GoogleAuth()">Continúa con Google</button>
 
-			<div class="formGroup">
-				<span class="or"><span class="orInner">O</span></span>
-			</div>
+	<div class="Separator"></div>
 
-			<div class="formGroup">
-				<button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-					<i class="fab fa-google-plus-g"></i>
-					Continúa con Google
-				</button>
-			</div>
-		</div>
-
-		<div class="redirectToLogin">
-			<p>¿Ya tienes una cuenta?</p>
-			<span class="redirect" routerLink="/sign-in">Ingresa Aquí</span>
-		</div>
-	</div>
+	<p>¿Ya tienes una cuenta?</p>
+	<p class="Link" routerLink="/sign-in">Ingresa Aquí</p>
 </div>

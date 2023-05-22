@@ -1,38 +1,15 @@
-<div class="container-fluid">
-	<div class="row">
-		<nav class="col-md-2 d-md-block bg-light sidebar">
-			<div class="sidebar-sticky">
-				<ul class="nav flex-column">
-					<li class="nav-item">
-						<a class="nav-link active">
-						<i class="fas fa-user"></i>User Profile
-						</a>
-					</li>
+<div class="Block">
+	<div class="Sidebar">
+		<p class="Nav">User Profile</p>
+		<p class="Nav" (click)="authService.SignOut()">Log out</p>
+	</div>
 
-					<li class="nav-item">
-						<a class="nav-link" (click)="authService.SignOut()">
-							<i class="fas fa-sign-out-alt"></i>Log out
-						</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-
-		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-			<div class="inner-adjust">
-				<div class="row" *ngIf="authService.userData as user">
-					<div class="col-md-12">
-						<div class="media">
-							<div class="media-body">
-								<h1>Bienvenido! {{(user.displayName) ? user.displayName : 'User'}}</h1>
-								<!-- <p>User ID: <strong>{{user.uid}}</strong></p>
-								<p>Email: <strong>{{user.email}}</strong></p>
-								<p>Email Verified: <strong>{{user.emailVerified}}</strong></p> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</main>
+	<div class="Body">
+		<div class="Welcome" *ngIf="authService.userData as user">
+				<h3>Bienvenido! {{(user.displayName) ? user.displayName : 'User'}}</h3>
+				<!-- <p>User ID: <strong>{{user.uid}}</strong></p>
+				<p>Email: <strong>{{user.email}}</strong></p>
+				<p>Email Verified: <strong>{{user.emailVerified}}</strong></p> -->
+		</div>
 	</div>
 </div>
