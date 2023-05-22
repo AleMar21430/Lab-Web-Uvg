@@ -1,5 +1,11 @@
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
 .Block {
-	width: 20rem;
+	width: 25rem;
 	height: 60vh;
 	padding: 20px;
 	background: rgb(50,50,50);
@@ -24,7 +30,6 @@ h3, p {
 }
 
 input, button {
-	align-self: center;
 	width: 100%;
 	height: 3rem;
 	text-align: center;
@@ -40,6 +45,15 @@ button {
 
 button:hover {
 	transform: scale(1.05);
+}
+
+.Return {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	z-index: 5;
+	width: 3rem;
+	height: 3rem;
 }
 
 .Separator {

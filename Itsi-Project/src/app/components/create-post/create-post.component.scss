@@ -1,3 +1,9 @@
+main {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 .Block {
 	display: flex;
 	justify-content: flex-start;
@@ -32,7 +38,7 @@ h3 {
 	padding-bottom: 1rem;
 	font-size: 18pt;
 	color:rgb(190, 210, 255);
-	border-bottom-width: 1px ;
+	border-bottom-width: 1px;
 	border-radius: 5px;
 	text-decoration: none;
 	cursor: pointer;

@@ -1,26 +1,21 @@
-<div class="displayTable">
-	<div class="displayTableCell">
-		<div class="authBlock">
-			<h3>Gracias por Registrarte</h3>
+<main>
+	<div class="Block">
+		<button class="Return" routerLink="/sign-in">←</button>
+		<h3>Gracias por Registrarte</h3>
 
-			<div class="formGroup" *ngIf="authService.userData as user">
-				<p class="text-center">
-					Enviamos un correo de verificación a: 
-					<strong>{{ user.email }}</strong>.
-				</p>
-				<p class="text-center">Revisa tu correo y usa el link para recuperar tu contraseña.</p>
-			</div>
+		<div class="Separator"></div>
 
-			<div class="formGroup">
-				<button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
-					<i class="fas fa-redo-alt"></i>
-					Reenviar Correo de verificación
-				</button>
-			</div>
+		<div *ngIf="authService.userData as user">
+			<p>
+				Enviamos un correo de verificación a: 
+				<strong>{{ user.email }}</strong>.
+			</p>
+			<p>Revisa tu correo y usa el link para recuperar tu contraseña.</p>
 		</div>
 
-		<div class="redirectToLogin">
-			<span class="redirect" routerLink="/sign-in">Ingresa Aquí</span>
-		</div>
+		<button type="button" class="btn btnPrimary" (click)="authService.SendVerificationMail()">
+			<i class="fas fa-redo-alt"></i>
+			Reenviar Correo de verificación
+		</button>
 	</div>
-</div>
+</main>

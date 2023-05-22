@@ -1,0 +1,99 @@
+.Footer {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	background-color: rgb(40,40,40);
+	color: rgb(250,250,250);
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	height: 5rem;
+}
+.Header {
+	display: flex;
+	justify-content:center;
+	background-color: rgb(40,40,40);
+	padding-top: 0.25%;
+	padding-bottom: 0.25%;
+}
+.Header_Link {
+	font-size: 14pt;
+	color: rgb(250,250,250);
+	background-color: rgb(50,50,50);
+	text-align: center;
+	text-decoration: underline;
+	padding: 0.2% 1% 0.2% 1%;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+	cursor: pointer;
+}
+.Header_Link_Selected {
+	font-size: 14pt;
+	color: rgb(250,250,250);
+	background-color: rgb(100,100,100);
+	padding: 0.2% 2% 0.2% 2%;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+	cursor: pointer;
+}
+.Menu {
+	position: sticky;
+	top: 0;
+	display: flex;
+	justify-content: left;
+	background-color: rgb(15,15,15);
+	padding-top: 0.25%;
+	padding-bottom: 0.25%;
+}
+.Menu_Link {
+	font-size: 14pt;
+	color: rgb(250,250,250);
+	background-color: rgb(35,35,35);
+	text-align: center;
+	text-decoration: underline;
+	padding: 0.2% 1% 0.2% 1%;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+	cursor: pointer;
+}
+.Menu_Link_Selected {
+	font-size: 14pt;
+	color: rgb(250,250,250);
+	background-color: rgb(65,65,65);
+	padding: 0.2% 2% 0.2% 2%;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+	cursor: pointer;
+}
+p {
+	background: transparent;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	cursor: default;
+}
+.Login {
+	right: 0.5rem;
+	position: absolute;
+	width: 9rem;
+	height: 3rem;
+	text-align: center;
+	border-radius: 5px;
+	border-width: 1px;
+	margin-top: 0.5rem;
+	transition: 0.2s ease-in-out;
+	background-color: rgb(90, 130, 160);
+}
+.Login:hover {
+	transform: scale(1.05);
+}

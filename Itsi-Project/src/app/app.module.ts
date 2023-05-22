@@ -21,6 +21,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 // service
 import { AuthService } from './shared/services/auth.service';
+import { HomeComponent } from './components/home/home.component';
+import { CreatePostComponent } from './components/create-post/create-post.component';
+import { NewsComponent } from './components/news/news.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { AuthService } from './shared/services/auth.service';
     SignUpComponent,
     ForgotPasswordComponent,
     VerifyEmailComponent,
+    HomeComponent,
+    CreatePostComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,

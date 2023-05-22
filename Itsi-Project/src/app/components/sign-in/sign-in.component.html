@@ -1,5 +1,6 @@
 <main>
 	<div class="Block">
+		<button class="Return" routerLink="/home">←</button>
 		<h3>Ingresar</h3>
 
 		<div class="Separator"></div>
@@ -9,8 +10,8 @@
 
 		<div class="Separator"></div>
 
-		<button type="button" (click)="authService.SignIn(userName.value, userPassword.value)">Inicar Sesión</button>
-		<button type="button" (click)="authService.GoogleAuth()">Ingresar con Google</button>
+		<button (click)="authService.SignIn(userName.value, userPassword.value)">Inicar Sesión</button>
+		<button (click)="authService.GoogleAuth()">Ingresar con Google</button>
 
 		<div class="Separator"></div>
 
