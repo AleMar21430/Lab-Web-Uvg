@@ -8,7 +8,10 @@
 
 		<div class="Body">
 			<div class="Welcome" *ngIf="authService.userData as user">
+				<h3>{{(user.email) ? user.displayName : 'Autor desconocido'}}</h3>
 			</div>
+			<input type="text" placeholder="Data" #htmlData required/>
+			<button (click)="createPost(htmlData.value)">Crear Noticia</button>
 		</div>
 	</div>
 </main>
