@@ -32,9 +32,10 @@
 			</div>
 			<div class="News_Column">
 				<div *ngFor="let post of news | async">
-					<h3>{{ post.author }}</h3>
+					<p>{{ post.author }}<p>
 					<p>{{ post.date }}</p>
 					<p>{{ post.htmlContent }}</p>
+					<br>
 				</div>
 			</div>
 		</div>
