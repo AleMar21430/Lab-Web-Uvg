@@ -1,0 +1,16 @@
+<main>
+	<div class="Block">
+		<button class="Return" routerLink="/sign-in">←</button>
+		<h3>Registrate</h3>
+
+		<div class="Separator"></div>
+
+		<input type="email" placeholder="Correo electrónico" #userEmail required />
+		<input type="password" placeholder="Contraseña" #userPwd required/>
+
+		<div class="Separator"></div>
+		
+		<button type="button" (click)="authService.SignUp(userEmail.value, userPwd.value)">Registrate</button>
+		<button type="button" (click)="authService.GoogleAuth()">Continúa con Google</button>
+	</div>
+</main>

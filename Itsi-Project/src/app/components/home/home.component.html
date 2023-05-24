@@ -5,22 +5,30 @@
 		<p class="Header_Link">Censes</p>
 		<p class="Header_Link">Parroquia</p>
 		<p class="Header_Link">Pastoral Juvenil</p>
-		<p class="Header_Link">Salecianos</p>
+		<p class="Header_Link">Salesianos</p>
 	</div>
-	<div class="Menu">
-		<p class="Menu_Link_Selected">ITSI</p>
-		<p class="Menu_Link">Buletín Saleciano</p>
-		<p class="Menu_Link">Iglesia</p>
-		<p class="Menu_Link">Inspectoría</p>
-		<p class="Menu_Link" routerLink="/news">Noticias</p>
-		<p class="Menu_Link">Sobre Nosotros</p>
-		<p class="Menu_Link">Contáctanos</p>
+	<div class="Sub_Header">
+		<p class="Header_Link_Selected">ITSI</p>
+		<p class="Header_Link" routerLink="/buletin">Buletín Salesiano</p>
+		<p class="Header_Link" routerLink="/iglesia">Iglesia</p>
+		<p class="Header_Link" routerLink="/inspectoria">Inspectoría</p>
+		<p class="Header_Link" routerLink="/noticias">Noticias</p>
+		<p class="Header_Link" routerLink="/sobre-nosotros">Sobre Nosotros</p>
+		<p class="Header_Link" routerLink="/contacto">Contáctanos</p>
 	</div>
-	<div class="Fixed_Image">
+	<div class="Fixed_Image" style="background-image:url('./../../../assets/Background.jpg'); height:42rem;">
 		<h1 class="Title">ITSI</h1>
+		<h2>Instituto Teológico Salesiano Interinspectorial.</h2>
 	</div>
-	<footer class="Footer">
-		<p>Contáctanos: </p>
-		<button class="Login" routerLink="/sign-in">Inicia Sesión</button>
-	</footer>
+	<div class="Block">
+		<h1>Quiénes somos.</h1>
+			<div class="Horizontal_Layout">
+			<img class="Logo" src="./../../../assets/Salesianos.png"/>
+			<p>
+				<br>
+				Somos XD.
+			</p>
+		</div>
+	</div>
+	<app-footer></app-footer>
 </main>

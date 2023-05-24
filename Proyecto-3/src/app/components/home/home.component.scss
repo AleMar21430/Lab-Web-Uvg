@@ -1,0 +1,57 @@
+.Block{
+	width: 100vw;
+	height: 100vh;
+}
+
+.Background{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: rgb(200,200,200);
+	background-blend-mode: multiply;
+
+	width: 105vw;
+	height: 105vh;
+	translate: -2.5vw -2.5vh;
+	overflow: hidden;
+}
+
+.Spinning {
+	position: absolute;
+	background-image: url('./../../../assets/1024px-Gajillion_Islands_Planet.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	bottom: -10vh;
+	left: -5vw;
+	width: 25vw;
+	height: 25vw;
+	animation: rotate 120s linear infinite;
+}
+@keyframes rotate {
+	0% {
+		rotate: 0deg;
+	}
+	100% {
+		rotate: 360deg;
+	}
+}
+
+
+h1 {
+	font-size: 60pt;
+	font-weight: 900;
+	-webkit-text-stroke: 3px rgb(0,0,0);
+	text-shadow: 0 0 10px rgb(90, 150, 255);
+}
+h2 {
+	font-size: 40pt;
+	font-weight: 900;
+	-webkit-text-stroke: 2px rgb(0,0,0);
+	text-shadow: 0 0 10px rgb(90, 150, 255);
+}

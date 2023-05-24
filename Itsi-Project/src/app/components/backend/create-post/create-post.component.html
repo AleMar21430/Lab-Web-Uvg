@@ -1,0 +1,14 @@
+<main>
+	<div class="Block">
+		<div class="Sidebar">
+			<p class="Nav" routerLink="/dashboard">Perfil del Usuario</p>
+			<p class="Nav">Crear Noticia</p>
+			<p class="Nav" (click)="authService.SignOut()">Cerrar Sesión</p>
+		</div>
+
+		<div class="Body">
+			<div class="Welcome" *ngIf="authService.userData as user">
+			</div>
+		</div>
+	</div>
+</main>

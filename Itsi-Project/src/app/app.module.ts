@@ -1,54 +1,63 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AppComponent } from './app.component';
+
+import { AuthService } from './shared/services/auth.service';
 import { environment } from '../environments/environment';
-
-// components
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { SignUpComponent } from './components/sign-up/sign-up.component';
-import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
-
-// routing
 import { AppRoutingModule } from './app-routing.module';
 
-// service
-import { AuthService } from './shared/services/auth.service';
-import { HomeComponent } from './components/home/home.component';
-import { CreatePostComponent } from './components/create-post/create-post.component';
-import { NewsComponent } from './components/news/news.component';
+import { ForgotPasswordComponent } from './components/backend/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/backend/verify-email/verify-email.component';
+import { CreatePostComponent } from './components/backend/create-post/create-post.component';
+import { DashboardComponent } from './components/backend/dashboard/dashboard.component';
+import { SignInComponent } from './components/backend/sign-in/sign-in.component';
+import { SignUpComponent } from './components/backend/sign-up/sign-up.component';
 
+import { InspectorateComponent } from './components/index/inspectorate/inspectorate.component';
+import { AboutUsComponent } from './components/index/about-us/about-us.component';
+import { BulletinComponent } from './components/index/bulletin/bulletin.component';
+import { ChurchComponent } from './components/index/church/church.component';
+import { ContactComponent } from './components/index/contact/contact.component';
+import { NewsComponent } from './components/index/news/news.component';
+
+import { HomeComponent } from './components/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    DashboardComponent,
-    SignInComponent,
-    SignUpComponent,
-    ForgotPasswordComponent,
-    VerifyEmailComponent,
-    HomeComponent,
-    CreatePostComponent,
-    NewsComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
-    AngularFireStorageModule,
-    AngularFireDatabaseModule,
-    AppRoutingModule,
-  ],
-  providers: [AuthService],
-  bootstrap: [AppComponent],
+	declarations: [
+		AppComponent,
+		DashboardComponent,
+		SignInComponent,
+		SignUpComponent,
+		ForgotPasswordComponent,
+		VerifyEmailComponent,
+		HomeComponent,
+		CreatePostComponent,
+		NewsComponent,
+		ChurchComponent,
+		BulletinComponent,
+		InspectorateComponent,
+		AboutUsComponent,
+		ContactComponent,
+		FooterComponent,
+	],
+	imports: [
+		BrowserModule,
+		AngularFireModule.initializeApp(environment.firebase),
+		AngularFireAuthModule,
+		AngularFirestoreModule,
+		AngularFireStorageModule,
+		AngularFireDatabaseModule,
+		AppRoutingModule,
+	],
+	providers: [AuthService],
+	bootstrap: [AppComponent],
 })
 
 export class AppModule {}
