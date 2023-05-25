@@ -13,18 +13,22 @@ import { ChurchComponent } from './components/index/church/church.component';
 import { ContactComponent } from './components/index/contact/contact.component';
 import { NewsComponent } from './components/index/news/news.component';
 
+import { MaintenanceComponent } from './components/maintenance/maintenance.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { AuthGuard } from './shared/guard/auth.guard';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/hogar', pathMatch: 'full' },
+	
 	{ path: 'iniciar-sesion', component: SignInComponent },
 	{ path: 'panel', component: DashboardComponent, canActivate: [AuthGuard] },
 	{ path: 'crear-noticia', component: CreatePostComponent, canActivate: [AuthGuard] },
 	{ path: 'crear-boletin', component: CreateBulletinComponent, canActivate: [AuthGuard] },
 
 	{ path: 'hogar', component: HomeComponent },
+	{ path: '404', component: MaintenanceComponent },
+
 	{ path: 'boletin', component: BulletinComponent },
 	{ path: 'iglesia', component: ChurchComponent },
 	{ path: 'inspectoria', component: InspectorateComponent },
