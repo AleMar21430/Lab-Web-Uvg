@@ -59,7 +59,8 @@ h2 {
 	font-size: 30pt;
 	font-weight: 700;
 	background: transparent;
-	-webkit-text-stroke: 2px rgb(0,0,0);
+	-webkit-text-stroke: 2px black;
+	text-shadow: 0 0 5px black;
 }
 
 .Login {
@@ -83,13 +84,14 @@ h2 {
 	font-weight: 700;
 	color: rgb(250,250,250);
 	background: transparent;
-	-webkit-text-stroke: 3px rgb(0,0,0);
+	-webkit-text-stroke: 3px black;
 	margin-left: 5rem;
 	margin-top: 2rem;
+	text-shadow: 0 0 10px black;
 }
 .Fixed_Image {
 	width: 100%;
-	background-color: rgb(175,175,175);
+	background-color: rgb(150,150,150);
 	background-blend-mode: multiply;
 	object-fit: cover;
 	background-attachment: fixed;

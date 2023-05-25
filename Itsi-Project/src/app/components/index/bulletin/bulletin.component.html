@@ -9,18 +9,26 @@
 	</div>
 	<div class="Sub_Header">
 		<p class="Header_Link" routerLink="/hogar">ITSI</p>
-		<p class="Header_Link_Selected">Buletín Salesiano</p>
+		<p class="Header_Link_Selected">Boletín Salesiano</p>
 		<p class="Header_Link" routerLink="/iglesia">Iglesia</p>
 		<p class="Header_Link" routerLink="/inspectoria">Inspectoría</p>
 		<p class="Header_Link" routerLink="/noticias">Noticias</p>
 		<p class="Header_Link" routerLink="/sobre-nosotros">Sobre Nosotros</p>
 		<p class="Header_Link" routerLink="/contacto">Contáctanos</p>
 	</div>
-	<div class="Fixed_Image" style="background-image:url('./../../../../assets/Background.jpg'); height:20rem;">
-		<h1 class="Title">Buletín Salesiano</h1>
+	<div class="Fixed_Image" style="background-image:url('./../../../../assets/Background_Bulletin.jpg'); height:20rem;">
+		<h1 class="Title">Boletín Salesiano</h1>
 	</div>
 	<div class="Block">
-		
+		<div class="News_Column">
+			<div class="News" *ngFor="let post of bulletins | async">
+				<p>{{ post.author }}<p>
+				<p>{{ post.date }}</p>
+				<div class="News_Separator"></div>
+				<p>{{ post.htmlContent }}</p>
+				<br>
+			</div>
+		</div>
 	</div>
 	<app-footer></app-footer>
 </main>

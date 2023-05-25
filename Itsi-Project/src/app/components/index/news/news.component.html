@@ -9,14 +9,14 @@
 	</div>
 	<div class="Sub_Header">
 		<p class="Header_Link" routerLink="/hogar">ITSI</p>
-		<p class="Header_Link" routerLink="/buletin">Buletín Salesiano</p>
+		<p class="Header_Link" routerLink="/boletin">Boletín Salesiano</p>
 		<p class="Header_Link" routerLink="/iglesia">Iglesia</p>
 		<p class="Header_Link" routerLink="/inspectoria">Inspectoría</p>
 		<p class="Header_Link_Selected">Noticias</p>
 		<p class="Header_Link" routerLink="/sobre-nosotros">Sobre Nosotros</p>
 		<p class="Header_Link" routerLink="/contacto">Contáctanos</p>
 	</div>
-	<div class="Fixed_Image" style="background-image:url('./../../../../assets/Background.jpg'); height:20rem;">
+	<div class="Fixed_Image" style="background-image:url('./../../../../assets/Background_News.jpg'); height:20rem;">
 		<h1 class="Title">Noticias</h1>
 	</div>
 	<div class="Block">
@@ -44,7 +44,7 @@
 					<p>{{ post.author }}<p>
 					<p>{{ post.date }}</p>
 					<div class="News_Separator"></div>
-					<p>{{ post.htmlContent }}</p>
+					<p [innerHTML]=post.htmlContent></p>
 					<br>
 				</div>
 			</div>

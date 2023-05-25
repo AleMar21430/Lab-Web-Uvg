@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
+import { CreateBulletinComponent } from './components/backend/create-bulletin/create-bulletin.component';
 import { CreatePostComponent } from './components/backend/create-post/create-post.component';
 import { DashboardComponent } from './components/backend/dashboard/dashboard.component';
 import { SignInComponent } from './components/backend/sign-in/sign-in.component';
@@ -21,9 +22,10 @@ const routes: Routes = [
 	{ path: 'iniciar-sesion', component: SignInComponent },
 	{ path: 'panel', component: DashboardComponent, canActivate: [AuthGuard] },
 	{ path: 'crear-noticia', component: CreatePostComponent, canActivate: [AuthGuard] },
+	{ path: 'crear-boletin', component: CreateBulletinComponent, canActivate: [AuthGuard] },
 
 	{ path: 'hogar', component: HomeComponent },
-	{ path: 'buletin', component: BulletinComponent },
+	{ path: 'boletin', component: BulletinComponent },
 	{ path: 'iglesia', component: ChurchComponent },
 	{ path: 'inspectoria', component: InspectorateComponent },
 	{ path: 'noticias', component: NewsComponent },

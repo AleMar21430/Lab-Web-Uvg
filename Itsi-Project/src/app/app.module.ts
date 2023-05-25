@@ -25,6 +25,7 @@ import { NewsComponent } from './components/index/news/news.component';
 
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CreateBulletinComponent } from './components/backend/create-bulletin/create-bulletin.component';
 
 @NgModule({
 	declarations: [
@@ -40,6 +41,7 @@ import { FooterComponent } from './components/footer/footer.component';
 		AboutUsComponent,
 		ContactComponent,
 		FooterComponent,
+  CreateBulletinComponent,
 	],
 	imports: [
 		BrowserModule,

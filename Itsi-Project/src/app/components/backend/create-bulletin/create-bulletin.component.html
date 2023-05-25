@@ -2,8 +2,8 @@
 	<div class="Block">
 		<div class="Sidebar">
 			<p class="Nav" routerLink="/panel">Mi Perfil</p>
-			<p class="Nav">Crear Noticia</p>
-			<p class="Nav" routerLink="/crear-boletin">Crear Boletín</p>
+			<p class="Nav" routerLink="/crear-noticia">Crear Noticia</p>
+			<p class="Nav">Crear Boletín</p>
 			<p class="Nav" (click)="authService.SignOut()">Cerrar Sesión</p>
 		</div>
 
@@ -12,7 +12,7 @@
 				<h3>{{(user.email) ? user.displayName : 'Autor desconocido'}}</h3>
 			</div>
 			<textarea type="text" placeholder="Data" #htmlData required></textarea>
-			<button class="Button" (click)="createPost(htmlData.value)">Crear Noticia</button>
+			<button class="Button" (click)="createPost(htmlData.value)">Crear Buletín</button>
 		</div>
 	</div>
 </main>

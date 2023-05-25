@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
 
 interface News {
 	author: string;
@@ -9,9 +8,9 @@ interface News {
 }
 
 @Component({
-  selector: 'app-news',
-  templateUrl: './news.component.html',
-  styleUrls: ['./../../index.component.scss','./news.component.scss']
+	selector: 'app-news',
+	templateUrl: './news.component.html',
+	styleUrls: ['./../../index.component.scss','./news.component.scss']
 })
 
 export class NewsComponent implements OnInit {
