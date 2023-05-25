@@ -9,7 +9,7 @@ El objetivo de este proyecto es proveer una página web con funcionalidades de a
 Es una mezcla entre el Cejsua, (Centro Juvenil Salesiano), la universidad mesoamericana, la Iglesia María Auxiliadora / Parroquia San Juan Bosco, el área de Pastoral Juvenil y otros aspectos.
 
 # Technologies Used:
-[![My Skills](https://skills.thijs.gg/icons?i=html,scss,js,angular,firebase)](https://skills.thijs.gg)
+[![My Skills](https://skills.thijs.gg/icons?i=html,scss,ts,angular,firebase)](https://skills.thijs.gg)
 
 # Run:
 ```
