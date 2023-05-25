@@ -12,12 +12,9 @@ import { AuthService } from './shared/services/auth.service';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 
-import { ForgotPasswordComponent } from './components/backend/forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './components/backend/verify-email/verify-email.component';
 import { CreatePostComponent } from './components/backend/create-post/create-post.component';
 import { DashboardComponent } from './components/backend/dashboard/dashboard.component';
 import { SignInComponent } from './components/backend/sign-in/sign-in.component';
-import { SignUpComponent } from './components/backend/sign-up/sign-up.component';
 
 import { InspectorateComponent } from './components/index/inspectorate/inspectorate.component';
 import { AboutUsComponent } from './components/index/about-us/about-us.component';
@@ -34,9 +31,6 @@ import { FooterComponent } from './components/footer/footer.component';
 		AppComponent,
 		DashboardComponent,
 		SignInComponent,
-		SignUpComponent,
-		ForgotPasswordComponent,
-		VerifyEmailComponent,
 		HomeComponent,
 		CreatePostComponent,
 		NewsComponent,

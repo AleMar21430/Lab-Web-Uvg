@@ -24,14 +24,22 @@
 		<div class="Separator"></div>
 		<div class="News_Container">
 			<div class="News_Column">
-				<h2>Facebook.</h2>
-				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcejusa.gt%2Fposts%2Fpfbid022rWTm7iSxzTtn2PVmhREqFGhHTezzkoU1kACweqtLuVRj5NUX5iHoQHY7GPnTbdHl&show_text=true&width=500" width="500" height="737" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcejusa.gt%2Fposts%2Fpfbid02LowGBksHuAtHkaxUZttGwewx1uTRv6yjtQYAEmaiwUd4nrq5y1QiGUkiHp4qSeRxl&show_text=true&width=500" width="500" height="737" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcejusa.gt%2Fposts%2Fpfbid028y1ELyatTRCAcGbQyrg2iTtR1bwAvJKWQ9kFTRsRqH7Kf8GGTxr2ZSQDjpoC22E6l&show_text=true&width=500" width="500" height="737" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-				<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D707317958061522%26set%3Da.514581284001858&show_text=true&width=500" width="500" height="355" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+				<h1>Facebook.</h1>
+				<div class="Facebook_Post">
+					<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcejusa.gt%2Fposts%2Fpfbid022rWTm7iSxzTtn2PVmhREqFGhHTezzkoU1kACweqtLuVRj5NUX5iHoQHY7GPnTbdHl&show_text=true&width=500" width="500" height="737" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+				</div>
+				<div class="Facebook_Post">
+					<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcejusa.gt%2Fposts%2Fpfbid02LowGBksHuAtHkaxUZttGwewx1uTRv6yjtQYAEmaiwUd4nrq5y1QiGUkiHp4qSeRxl&show_text=true&width=500" width="500" height="737" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+				</div>
+				<div class="Facebook_Post">
+					<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fcejusa.gt%2Fposts%2Fpfbid028y1ELyatTRCAcGbQyrg2iTtR1bwAvJKWQ9kFTRsRqH7Kf8GGTxr2ZSQDjpoC22E6l&show_text=true&width=500" width="500" height="737" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+				</div>
+				<div class="Facebook_Post">
+					<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto%2F%3Ffbid%3D707317958061522%26set%3Da.514581284001858&show_text=true&width=500" width="500" height="355" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+				</div>
 			</div>
 			<div class="News_Column">
-				<h2>Sito ITSI.</h2>
+				<h1>Sito ITSI.</h1>
 				<div class="News" *ngFor="let post of news | async">
 					<p>{{ post.author }}<p>
 					<p>{{ post.date }}</p>
@@ -42,5 +50,4 @@
 			</div>
 		</div>
 	</div>
-	<app-footer></app-footer>
 </main>

@@ -1,23 +1,7 @@
 <main>
 	<div class="Block">
-		<button class="Return" routerLink="/hoagr">←</button>
-		<h3>Ingresar</h3>
-
-		<div class="Separator"></div>
-
-		<input type="text" placeholder="Correo" #userName required/>
-		<input type="password" placeholder="Contraseña" #userPassword required/>
-
-		<div class="Separator"></div>
-
-		<button (click)="authService.SignIn(userName.value, userPassword.value)">Inicar Sesión</button>
+		<button class="Return" routerLink="/hogar">←</button>
 		<button (click)="authService.GoogleAuth()">Ingresar con Google</button>
-
-		<div class="Separator"></div>
-
-		<p class="Link" routerLink="/recuperar-contraseña">¿Olvidaste tu contraseña?</p>
-		<p>¿No tienes una cuenta?</p>
-		<p class="Link" routerLink="/registrarse">Regístrate</p>
-		
+		<button (click)="authService.RequestVerification()">Enviar solicitud de acceso</button>
 	</div>
 </main>

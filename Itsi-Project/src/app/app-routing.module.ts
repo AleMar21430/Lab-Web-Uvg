@@ -1,12 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { ForgotPasswordComponent } from './components/backend/forgot-password/forgot-password.component';
-import { VerifyEmailComponent } from './components/backend/verify-email/verify-email.component';
 import { CreatePostComponent } from './components/backend/create-post/create-post.component';
 import { DashboardComponent } from './components/backend/dashboard/dashboard.component';
 import { SignInComponent } from './components/backend/sign-in/sign-in.component';
-import { SignUpComponent } from './components/backend/sign-up/sign-up.component';
 
 import { InspectorateComponent } from './components/index/inspectorate/inspectorate.component';
 import { AboutUsComponent } from './components/index/about-us/about-us.component';
@@ -22,9 +19,6 @@ import { AuthGuard } from './shared/guard/auth.guard';
 const routes: Routes = [
 	{ path: '', redirectTo: '/hogar', pathMatch: 'full' },
 	{ path: 'iniciar-sesion', component: SignInComponent },
-	{ path: 'registrarse', component: SignUpComponent },
-	{ path: 'recuperar-contraseña', component: ForgotPasswordComponent },
-	{ path: 'verificar-correo', component: VerifyEmailComponent },
 	{ path: 'panel', component: DashboardComponent, canActivate: [AuthGuard] },
 	{ path: 'crear-noticia', component: CreatePostComponent, canActivate: [AuthGuard] },
 

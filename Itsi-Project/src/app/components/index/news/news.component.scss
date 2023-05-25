@@ -1,16 +1,17 @@
-.Separator {
-	margin-top: 2rem;
-	background: gray;
-	width: 100%;
-	height: 1px;
-}
-
 .News_Container {
 	display: flex;
 	margin-left: 10vw;
-	height: 77vh;
+	height: 95vh;
 	overflow-y: scroll;
 	overflow-x: hidden;
+}
+.News_Container h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 40pt;
+	font-weight: 700;
+	background: transparent;
+	-webkit-text-stroke: 3px rgb(0,0,0);
 }
 
 .News_Column {
@@ -20,12 +21,21 @@
 	width: 40vw;
 	padding: 10px;
 }
+.Facebook_Post {
+	padding: 0;
+	margin: 0;
+	width: fit-content;
+	height: fit-content;
+	border-width: 2px;
+	border-radius: 10px;
+	margin-bottom: 2rem;
+}
+
 iframe {
 	padding: 0;
 	margin: 0;
 	width:30vw;
 	background: rgb(225,225,225);
-	border-width: 1px;
 	border-radius: 10px;
 }
 
@@ -36,6 +46,7 @@ iframe {
 	border-width: 1px;
 	background: rgb(225,225,225);
 	border-radius: 10px;
+	margin-bottom: 2rem;
 }
 .News p{
 	padding: 0;
