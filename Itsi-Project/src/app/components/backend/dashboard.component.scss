@@ -1,0 +1,65 @@
+main {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.Block {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+h3 {
+	background: transparent;
+	cursor: default;
+}
+
+.Body {
+	padding: 2.5rem;
+	width: 100%;
+}
+
+.Sidebar {
+	width:15rem;
+	border-right-width: 2px;
+	height: 100vh;
+}
+
+.Nav {
+	width: 100%;
+	margin: 0;
+	height: fit-content;
+	padding-left: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	font-size: 18pt;
+	color:rgb(190, 210, 255);
+	border-bottom-width: 1px;
+	border-radius: 5px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.Nav:hover {
+	background: rgb(50,50,50);
+}
+
+.Button {
+	width: 100%;
+	height: 3rem;
+	text-align: center;
+	border-radius: 5px;
+	border-width: 1px;
+	margin-top: 0.5rem;
+	transition: 0.2s ease-in-out;
+	background-color: rgb(90, 130, 160);
+}
+.Button:hover {
+	font-size: 14pt;
+}

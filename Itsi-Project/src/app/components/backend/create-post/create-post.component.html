@@ -1,7 +1,7 @@
 <main>
 	<div class="Block">
 		<div class="Sidebar">
-			<p class="Nav" routerLink="/panel">Perfil del Usuario</p>
+			<p class="Nav" routerLink="/panel">Mi Perfil</p>
 			<p class="Nav">Crear Noticia</p>
 			<p class="Nav" (click)="authService.SignOut()">Cerrar Sesión</p>
 		</div>
@@ -10,8 +10,8 @@
 			<div class="Welcome" *ngIf="authService.userData as user">
 				<h3>{{(user.email) ? user.displayName : 'Autor desconocido'}}</h3>
 			</div>
-			<input type="text" placeholder="Data" #htmlData required/>
-			<button (click)="createPost(htmlData.value)">Crear Noticia</button>
+			<textarea type="text" placeholder="Data" #htmlData required></textarea>
+			<button class="Button" (click)="createPost(htmlData.value)">Crear Noticia</button>
 		</div>
 	</div>
 </main>
