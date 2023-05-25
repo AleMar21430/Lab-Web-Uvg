@@ -4,6 +4,7 @@ import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore, AngularFirestoreDocument, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 @Injectable({
 	providedIn: 'root',
@@ -41,7 +42,14 @@ export class AuthService {
 
 	GoogleAuth() {
 		return this.afAuth.signInWithPopup(new auth.GoogleAuthProvider()).then((result: any) => {
-			this.router.navigate(['panel']);
+			const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${result.user.email}`);
+			userRef.valueChanges().subscribe((data: any) => {
+				if (data.author) {
+					this.router.navigate(['panel']);
+				} else {
+					window.alert("No tienes autorización")
+				}
+			})
 		});
 	}
 
