@@ -37,10 +37,12 @@
 <template>
 	<main>
 		<div class="Column">
-			
-			<div class="Background Parallax Column" pr-val="5" :style="{backgroundImage: `url(${BG})` }">
-				<h1 class="Parallax" pr-val="40">Alejandro Martínez</h1>
-				<h2 class="Parallax" pr-val="25">21430</h2>
+
+			<div class="Card">
+				<div class="Background Parallax Column" pr-val="5" :style="{backgroundImage: `url(${BG})` }">
+					<h1 class="Parallax" pr-val="40">Alejandro Martínez</h1>
+					<h2 class="Parallax" pr-val="25">21430</h2>
+				</div>
 			</div>
 
 			<div class="Scroll_Area">
@@ -81,6 +83,14 @@
 					<img class="Technology" src="https://skillicons.dev/icons?i=firebase"/>
 				</div>
 			</div>
+			
+			<iframe class="Block" src="https://itsi-project.web.app/hogar"></iframe>
+			<iframe class="Block" src="https://itsi-database.web.app/hogar"></iframe>
+			<iframe class="Block" src="https://blender-clone-ssr.web.app/"></iframe>
+			<iframe class="Block" src="https://old-labs.web.app/Lab%207_2/index.html"></iframe>
+			<iframe class="Block" src="https://old-labs.web.app/Lab%205_2/Lab6.html"></iframe>
+			<iframe class="Block" src="https://old-labs.web.app/Lab%204/Lab4.html"></iframe>
+			<iframe class="Block" src="https://old-labs.web.app/Lab%203/Inicio.html"></iframe>
 
 			<div class="Row Row_Start Block Block_Container">
 				<div class="Column">
