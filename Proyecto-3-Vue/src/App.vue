@@ -4,23 +4,30 @@
 </script>
 
 <script lang="ts">
-	var Mouse_X = 0;
-	var Mouse_Y = 0;
-
+	var MainParallax = false
+	var ReEnterParallax = 0.5
 
 	document.addEventListener("mousemove", parallax);
 	const elem = document.querySelector("#parallax");
 
 	function parallax(event: MouseEvent) {
 		const parallaxSpans = document.querySelectorAll('.Parallax');
+		if (MainParallax) {
+			
+			parallaxSpans.forEach((shift: any) => {
+				const position = shift.getAttribute('pr-val');
+				const x = ((event.pageX - window.innerWidth/2) * Number(position)) / 500 ;
+				const y = ((event.pageY - window.innerHeight/2) * Number(position)) / 500;
+				shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+				shift.style.transition = `transform ${ReEnterParallax}s`;
+			});
+			
+		} else {
 		parallaxSpans.forEach((shift: any) => {
-			const position = shift.getAttribute('pr-val');
-			Mouse_X = event.pageX
-			Mouse_Y = event.pageY
-			const x = ((event.pageX - window.innerWidth/2) * Number(position)) / 500 ;
-			const y = ((event.pageY - window.innerHeight/2) * Number(position)) / 500;
-			shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+			shift.style.transform = `translateX(0px) translateY(0px)`;
+			shift.style.transition = 'transform 0.75s ease-in-out';
 		});
+		}
 	}
 
 	$(window).scroll(function () {
@@ -28,10 +35,43 @@
 		Container.forEach((Item: any) => {
 			const offset = Item.getAttribute('scroll-offset') || 500;
 			const multiplier = Item.getAttribute('scroll-mult') || 1;
-			const x = (Number(offset) + window.scrollY * -Number(multiplier));
+			const x = (Number(offset) + window.scrollY * - Number(multiplier));
 			Item.style.transform = `translateX(${x}px)`;
 		});
+
+		const Header = document.getElementById("Scroll_Area")
+		if (Header)
+		if (window.scrollY > 4800) {
+			Header.style.transform = `translateY(${(window.scrollY - 4800) * -0.15}px)`
+		} else {
+			Header.style.transform = `translateY(0px)`
+		}
 	});
+
+	function setIsDivUnderMouse(isUnderMouse: boolean) {
+		MainParallax = isUnderMouse;
+		if (isUnderMouse) {
+			lerpToZero()
+		}
+	}
+
+	function lerpToZero() {
+	const startValue = 0.5;
+	const startTime = performance.now();
+
+	function update() {
+		const elapsedTime = performance.now() - startTime;
+		const progress = Math.min(elapsedTime / 500, 1); // Clamp progress to 1
+
+		ReEnterParallax = startValue * (1 - progress);
+
+		if (progress < 1) {
+			requestAnimationFrame(update); // Continue animating
+			}
+		}
+		update();
+	}
+
 </script>
 
 <template>
@@ -39,14 +79,20 @@
 		<div class="Column">
 
 			<div class="Card">
-				<div class="Background Parallax Column" pr-val="5" :style="{backgroundImage: `url(${BG})` }">
-					<h1 class="Parallax" pr-val="40">Alejandro Martínez</h1>
-					<h2 class="Parallax" pr-val="25">21430</h2>
+				<div 
+					class="Background Parallax Column"
+					pr-val="20"
+					:style="{backgroundImage: `url(${BG})` }"
+					@mouseenter="setIsDivUnderMouse(true)"
+					@mouseleave="setIsDivUnderMouse(false)"
+				>
+					<h1 class="Parallax" pr-val="60">Alejandro Martínez</h1>
+					<h2 class="Parallax" pr-val="40">21430</h2>
 				</div>
 			</div>
 
-			<div class="Scroll_Area">
-				<div class="Scroll_Slide" scroll-offset="2500" scroll-mult="3">
+			<div class="Scroll_Area" id="Scroll_Area">
+				<div class="Scroll_Slide" scroll-offset="0" scroll-mult="0.8">
 					<img class="Technology" src="https://skillicons.dev/icons?i=html"/>
 					<img class="Technology" src="https://skillicons.dev/icons?i=css"/>
 					<img class="Technology" src="https://skillicons.dev/icons?i=scss"/>
@@ -90,7 +136,7 @@
 			<iframe class="Block" src="https://old-labs.web.app/Lab%207_2/index.html"></iframe>
 			<iframe class="Block" src="https://old-labs.web.app/Lab%205_2/Lab6.html"></iframe>
 			<iframe class="Block" src="https://old-labs.web.app/Lab%204/Lab4.html"></iframe>
-			<iframe class="Block" src="https://old-labs.web.app/Lab%203/Inicio.html"></iframe>
+			<iframe class="Block" src="https://old-labs.web.app/Lab%203/Lab3_Home.html"></iframe>
 
 			<div class="Row Row_Start Block Block_Container">
 				<div class="Column">

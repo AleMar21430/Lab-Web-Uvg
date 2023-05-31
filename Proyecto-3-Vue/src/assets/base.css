@@ -157,6 +157,9 @@ p {
 	margin-bottom: 1rem;
 	-webkit-mask-image: linear-gradient(90deg, transparent 0%, white 5%, white 95%, transparent 100%);
 }
+.Scroll_Slide {
+	translate: 2500px 0;
+}
 
 .Technology {
 	margin: 0.1rem;
