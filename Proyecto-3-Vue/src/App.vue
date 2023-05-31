@@ -3,16 +3,45 @@
 	import $ from 'jquery'
 </script>
 
+<script lang="ts">
+
+	(function() {
+		document.addEventListener("mousemove", parallax);
+		const elem = document.querySelector("#parallax");
+
+		function parallax(event: MouseEvent) {
+			const parallaxSpans = document.querySelectorAll('.Parallax');
+			parallaxSpans.forEach((shift: any) => {
+				const position = shift.getAttribute('pr-val');
+				const x = ((event.pageX - window.innerWidth/2) * Number(position)) / 500 ;
+				const y = ((event.pageY - window.innerHeight/2) * Number(position)) / 500;
+				shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+			});
+		}
+	})();
+
+	$(window).scroll(function () {
+		const Container = document.querySelectorAll('.Scroll_Slide');
+		Container.forEach((Item: any) => {
+			const offset = Item.getAttribute('scroll-offset') || 500;
+			const multiplier = Item.getAttribute('scroll-mult') || 1;
+			const x = (Number(offset) + window.scrollY * -Number(multiplier));
+			Item.style.transform = `translateX(${x}px)`;
+		});
+	});
+</script>
+
 <template>
 	<main>
 		<div class="Column">
-
+			
 			<div class="Background Parallax Column" pr-val="5" :style="{backgroundImage: `url(${BG})` }">
 				<h1 class="Parallax" pr-val="40">Alejandro Martínez</h1>
 				<h2 class="Parallax" pr-val="25">21430</h2>
 			</div>
+
 			<div class="Scroll_Area">
-				<div class="Scroll_Slide" scroll-offset="725" scroll-mult="3">
+				<div class="Scroll_Slide" scroll-offset="2500" scroll-mult="3">
 					<img class="Technology" src="https://skillicons.dev/icons?i=html"/>
 					<img class="Technology" src="https://skillicons.dev/icons?i=css"/>
 					<img class="Technology" src="https://skillicons.dev/icons?i=scss"/>
@@ -125,27 +154,3 @@
 		</div>
 	</main>
 </template>
-
-<script lang="ts">
-	(function() {
-		document.addEventListener("mousemove", function (event: MouseEvent) {
-			const parallaxSpans = document.querySelectorAll('.Parallax')
-			parallaxSpans.forEach((Item: any) => {
-				const position = Item.getAttribute('pr-val')
-				const x = ((event.pageX - window.innerWidth/2)/2 * Number(position)) / 500
-				const y = ((event.pageY - window.innerHeight/2)/2 * Number(position)) / 500
-				Item.style.transform = `translateX(${x}px) translateY(${y}px)`
-			})
-		})
-	});
-
-	$(window).scroll(function () {
-		const Container = document.querySelectorAll('.Scroll_Slide')
-		Container.forEach((Item: any) => {
-			const offset = Item.getAttribute('scroll-offset') || 500
-			const multiplier = Item.getAttribute('scroll-mult') || 1
-			const x = (Number(offset) + window.scrollY * -Number(multiplier))
-			Item.style.transform = `translateX(${x}px)`
-		})
-	});
-</script>
