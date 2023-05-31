@@ -10,7 +10,6 @@ import { Router } from '@angular/router'
 })
 
 export class AuthService {
-
 	userData: any
 	userCollection: AngularFirestoreCollection<User>
 	users: any
@@ -36,7 +35,7 @@ export class AuthService {
 
 	get isLoggedIn(): boolean {
 		const user = JSON.parse(localStorage.getItem('user')!)
-		return user !== null && user.emailVerified !== false ? true : false
+		return user !== null ? true : false
 	}
 
 	GoogleAuth() {

@@ -25,7 +25,7 @@
 				<p>{{ post.author }}<p>
 				<p>{{ post.date }}</p>
 				<div class="News_Separator"></div>
-				<p>{{ post.htmlContent }}</p>
+				<p [innerHTML]="post.htmlContent"></p>
 				<br>
 			</div>
 		</div>
