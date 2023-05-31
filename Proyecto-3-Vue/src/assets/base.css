@@ -20,7 +20,7 @@ html, body {
 	height: fit-content;
 	color:rgb(225,225,225);
 	background-color: rgb(20, 20, 20);
-	overflow-x: hidden;
+	overflow-x: clip;
 }
 .Fit {
 	max-width: 100vw;
@@ -132,11 +132,11 @@ p {
 }
 
 .Scroll_Area {
-	background: rgb(20, 20, 20);
 	position: sticky;
 	top: 0;
+	z-index: 100;
+	background: rgb(20, 20, 20);
 	width: 95vw;
-	overflow: hidden;
 	margin-bottom: 1rem;
 	-webkit-mask-image: linear-gradient(90deg, transparent 0%, white 5%, white 95%, transparent 100%);
 }

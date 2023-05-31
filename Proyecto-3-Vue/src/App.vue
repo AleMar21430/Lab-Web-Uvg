@@ -4,21 +4,24 @@
 </script>
 
 <script lang="ts">
+	var Mouse_X = 0;
+	var Mouse_Y = 0;
 
-	(function() {
-		document.addEventListener("mousemove", parallax);
-		const elem = document.querySelector("#parallax");
 
-		function parallax(event: MouseEvent) {
-			const parallaxSpans = document.querySelectorAll('.Parallax');
-			parallaxSpans.forEach((shift: any) => {
-				const position = shift.getAttribute('pr-val');
-				const x = ((event.pageX - window.innerWidth/2) * Number(position)) / 500 ;
-				const y = ((event.pageY - window.innerHeight/2) * Number(position)) / 500;
-				shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
-			});
-		}
-	})();
+	document.addEventListener("mousemove", parallax);
+	const elem = document.querySelector("#parallax");
+
+	function parallax(event: MouseEvent) {
+		const parallaxSpans = document.querySelectorAll('.Parallax');
+		parallaxSpans.forEach((shift: any) => {
+			const position = shift.getAttribute('pr-val');
+			Mouse_X = event.pageX
+			Mouse_Y = event.pageY
+			const x = ((event.pageX - window.innerWidth/2) * Number(position)) / 500 ;
+			const y = ((event.pageY - window.innerHeight/2) * Number(position)) / 500;
+			shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+		});
+	}
 
 	$(window).scroll(function () {
 		const Container = document.querySelectorAll('.Scroll_Slide');
@@ -81,7 +84,7 @@
 
 			<div class="Row Row_Start Block Block_Container">
 				<div class="Column">
-					<div class="Column Col_Start Container Parallax" pr-val="15">
+					<div class="Column Col_Start Container">
 						<h3>Frontend Developer</h3>
 						<div>
 							<img class="Technology" src="https://skillicons.dev/icons?i=html"/>
@@ -99,7 +102,7 @@
 				</div>
 
 				<div class="Column">
-					<div class="Column Col_Start Container Parallax" pr-val="15">
+					<div class="Column Col_Start Container">
 						<h3>Backend Developer</h3>
 						<div>
 							<img class="Technology" src="https://skillicons.dev/icons?i=js"/>
@@ -130,27 +133,6 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="Row Row_Start Block Block_Container">
-				<div class="Column">
-					<div class="Column Col_Start Container Parallax" pr-val="15">
-						<h3>Frontend Developer</h3>
-						<div>
-							<img class="Technology" src="https://skillicons.dev/icons?i=html"/>
-						</div>
-					</div>
-				</div>
-
-				<div class="Column">
-					<div class="Column Col_Start Container Parallax" pr-val="15">
-						<h3>Backend Developer</h3>
-						<div>
-							<img class="Technology" src="https://skillicons.dev/icons?i=js"/>
-						</div>
-					</div>
-				</div>
-			</div>
-
 		</div>
 	</main>
 </template>
