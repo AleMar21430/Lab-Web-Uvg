@@ -33,19 +33,32 @@
 	$(window).scroll(function () {
 		const Container = document.querySelectorAll('.Scroll_Slide');
 		Container.forEach((Item: any) => {
-			const offset = Item.getAttribute('scroll-offset') || 500;
 			const multiplier = Item.getAttribute('scroll-mult') || 1;
-			const x = (Number(offset) + window.scrollY * - Number(multiplier));
-			Item.style.transform = `translateX(${x}px)`;
+			if (window.innerWidth > 600) {
+				const x = (window.scrollY * - Number(multiplier));
+				Item.style.transform = `translateX(${x}px)`;
+			} else {
+				const x = (window.scrollY * - Number(multiplier)*1.5);
+				Item.style.transform = `translateX(${x}px)`;
+			}
 		});
 
 		const Header = document.getElementById("Scroll_Area")
 		if (Header)
-		if (window.scrollY > 4800) {
-			Header.style.transform = `translateY(${(window.scrollY - 4800) * -0.15}px)`
+		if (window.innerWidth > 600) {
+			if (window.scrollY > 4800) {
+				Header.style.transform = `translateY(${(window.scrollY - 4800) * -0.15}px)`
+			} else {
+				Header.style.transform = `translateY(0px)`
+			}
 		} else {
-			Header.style.transform = `translateY(0px)`
+			if (window.scrollY > 1200) {
+				Header.style.transform = `translateY(${(window.scrollY - 1200) * -0.15}px)`
+			} else {
+				Header.style.transform = `translateY(0px)`
+			}
 		}
+		
 	});
 
 	function setIsDivUnderMouse(isUnderMouse: boolean) {
@@ -79,7 +92,7 @@
 		<div class="Column">
 
 			<div class="Card">
-				<div 
+				<div
 					class="Background Parallax Column"
 					pr-val="20"
 					:style="{backgroundImage: `url(${BG})` }"
@@ -92,7 +105,7 @@
 			</div>
 
 			<div class="Scroll_Area" id="Scroll_Area">
-				<div class="Scroll_Slide" scroll-offset="0" scroll-mult="0.8">
+				<div class="Scroll_Slide" scroll-mult="0.8">
 					<img class="Technology" src="https://skillicons.dev/icons?i=html"/>
 					<img class="Technology" src="https://skillicons.dev/icons?i=css"/>
 					<img class="Technology" src="https://skillicons.dev/icons?i=scss"/>
@@ -138,7 +151,7 @@
 			<iframe class="Block" src="https://old-labs.web.app/Lab%204/Lab4.html"></iframe>
 			<iframe class="Block" src="https://old-labs.web.app/Lab%203/Lab3_Home.html"></iframe>
 
-			<div class="Row Row_Start Block Block_Container">
+			<div class="Row Row_Start End_Card Block_Container">
 				<div class="Column">
 					<div class="Column Col_Start Container">
 						<h3>Frontend Developer</h3>
