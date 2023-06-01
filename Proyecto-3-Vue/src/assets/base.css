@@ -201,6 +201,11 @@ h3 {
 	font-size: 30pt;
 	font-weight: 500;
 }
+h4 {
+	margin-top: 5rem;
+	font-size: 30pt;
+	font-weight: 500;
+}
 p {
 	font-size: 16pt;
 }
@@ -222,21 +227,30 @@ p {
 	}
 }
 
+.Abs {
+	z-index: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
 .Scroll_Area {
 	position: sticky;
 	top: 0;
-	z-index: 100;
-	background: rgb(20, 20, 20);
-	width: 95vw;
-	margin-bottom: 1rem;
-	-webkit-mask-image: linear-gradient(90deg, transparent 0%, white 5%, white 95%, transparent 100%);
+	left: 0;
+	height: 100vh;
+	width: fit-content;
+	-webkit-mask-image: linear-gradient(0deg, transparent 0%, white 5%, white 95%, transparent 100%);
 }
 .Scroll_Slide {
-	translate: 125vw 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	translate: 0 -200vh;
 }
 @media only screen and (max-width: 600px) {
 	.Scroll_Slide {
-		translate: 1000px 0;
+		translate: 0 500px;
 	}
 }
 
