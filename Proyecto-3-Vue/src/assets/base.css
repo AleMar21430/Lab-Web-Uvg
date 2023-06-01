@@ -112,6 +112,11 @@ main {
 .Container:hover div {
 	opacity: 1;
 }
+@media only screen and (max-width: 1920px) {
+	.Container:hover {
+		height: 45rem;
+	}
+}
 @media only screen and (max-width: 750px) {
 	.Container {
 		width: 45vw;
@@ -123,12 +128,7 @@ main {
 		grid-gap: 2px;
 	}
 	.Container:hover {
-		height: 23rem;
-	}
-}
-@media only screen and (max-width: 1920px) {
-	.Container:hover {
-		height: 45rem;
+		height: 33rem;
 	}
 }
 
@@ -144,7 +144,7 @@ main {
 @media only screen and (max-width: 750px) {
 	.Card {
 		width: 95vw;
-		height: 15rem;
+		height: 25rem;
 	}
 }
 .End_Card {
@@ -155,16 +155,16 @@ main {
 	border-radius: 10px;
 	overflow: clip;
 }
-@media only screen and (max-width: 750px) {
-	.End_Card {
-		width: 95vw;
-		height: 25rem;
-	}
-}
 @media only screen and (max-width: 1920px) {
 	.End_Card {
 		width: 75vw;
 		height: 48rem;
+	}
+}
+@media only screen and (max-width: 750px) {
+	.End_Card {
+		width: 95vw;
+		height: 35rem;
 	}
 }
 .Background{
@@ -348,6 +348,7 @@ p {
 	position: absolute;
 	height: 100%;
 	scale: 1.1;
+	z-index: -5;
 }
 .Bounce p {
 	-webkit-text-stroke: 0.25px rgb(0,0,0);

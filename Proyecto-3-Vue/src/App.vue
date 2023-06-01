@@ -65,8 +65,8 @@
 					Header.style.transform = `translateX(0px)`
 				}
 			} else {
-				if (window.scrollY > 2700) {
-					Header.style.transform = `translateY(${(window.scrollY - 2700) * -0.25}px)`
+				if (window.scrollY > 3000) {
+					Header.style.transform = `translateY(${(window.scrollY - 3000) * -0.15}px)`
 				} else {
 					Header.style.transform = `translateY(0px)`
 				}
