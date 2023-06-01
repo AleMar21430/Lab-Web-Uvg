@@ -58,7 +58,7 @@ div {
 .Block, .Block_Container {
 	margin-top: 1rem;
 	aspect-ratio: 16/9;
-	width: 85vw;
+	width: 75vw;
 	justify-content: space-around;
 	border-radius: 10px;
 	overflow: clip;
@@ -99,7 +99,7 @@ main {
 	background: rgb(50, 50, 50);
 	border-radius: 10px;
 	border-width: 1px;
-	width: 40vw;
+	width: 36vw;
 	height: 5rem;
 	padding-left: 2vw;
 	padding-right: 2vw;
@@ -141,7 +141,7 @@ main {
 }
 
 .Card {
-	width: 85vw;
+	width: 75vw;
 	justify-content: space-around;
 	margin-top: 5vw;
 	height: 42rem;
@@ -157,7 +157,7 @@ main {
 	}
 }
 .End_Card {
-	width: 85vw;
+	width: 75vw;
 	justify-content: space-around;
 	margin-top: 5vw;
 	height: 42rem;
@@ -232,7 +232,7 @@ p {
 	-webkit-mask-image: linear-gradient(90deg, transparent 0%, white 5%, white 95%, transparent 100%);
 }
 .Scroll_Slide {
-	translate: 2500px 0;
+	translate: 125vw 0;
 }
 @media only screen and (max-width: 600px) {
 	.Scroll_Slide {
@@ -247,6 +247,10 @@ p {
 	height: 5vw;
 	width: 5vw;
 	transition: 0.3s;
+}
+.S {
+	height: 3vw;
+	width: 3vw;
 }
 .Technology:hover {
 	transform: scale(1.1);
@@ -283,4 +287,11 @@ p {
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+
+.Slide_Left {
+	translate: 100vw 0;
+}
+.Slide_Right {
+	translate: -100vw 0;
 }
