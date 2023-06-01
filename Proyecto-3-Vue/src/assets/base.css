@@ -61,7 +61,6 @@ div {
 	width: 75vw;
 	justify-content: space-around;
 	border-radius: 10px;
-	overflow: clip;
 	border-width: 1px;
 	overflow: hidden;
 }
@@ -127,6 +126,11 @@ main {
 		height: 23rem;
 	}
 }
+@media only screen and (max-width: 1920px) {
+	.Container:hover {
+		height: 45rem;
+	}
+}
 
 .Card {
 	width: 75vw;
@@ -155,6 +159,12 @@ main {
 	.End_Card {
 		width: 95vw;
 		height: 25rem;
+	}
+}
+@media only screen and (max-width: 1920px) {
+	.End_Card {
+		width: 75vw;
+		height: 48rem;
 	}
 }
 .Background{
@@ -217,7 +227,7 @@ p {
 		font-weight: 500;
 	}
 	p {
-		font-size: 3vw;
+		font-size: 5vw;
 	}
 }
 
@@ -315,9 +325,23 @@ p {
 	left: 5vw;
 }
 .Gif {
-	width: 15vw;
-	height: 15vw;
+	width: 10vw;
+	height: 10vw;
 	border-radius: 10px;
+}
+@media only screen and (max-width: 1920px) {
+	.Hello_Div {
+		position: absolute;
+		top: 4vw;
+		left: 5vw;
+	}
+}
+@media only screen and (max-width: 750px) {
+	.Hello_Div {
+		position: absolute;
+		top: 10vw;
+		left: 10vw;
+	}
 }
 
 .HSR {
@@ -330,7 +354,7 @@ p {
 	text-shadow: 0 0 2px rgb(20, 35, 62);
 }
 .Bounce {
-	animation: bounce 1.6s  linear 0.1s infinite;
+	animation: bounce 1.6s  linear 0.7s infinite;
 }
 
 @keyframes bounce {
@@ -361,4 +385,8 @@ p {
 	100% {
 		translate: -5px 0px;
 	}
+}
+
+iframe {
+	pointer-events: none;
 }

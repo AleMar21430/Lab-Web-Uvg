@@ -9,12 +9,9 @@
 	var ReEnterParallax = 0.5
 
 	document.addEventListener("mousemove", parallax);
-	const elem = document.querySelector("#parallax");
-
 	function parallax(event: MouseEvent) {
 		const parallaxSpans = document.querySelectorAll('.Parallax');
 		if (MainParallax) {
-			
 			parallaxSpans.forEach((shift: any) => {
 				const position = shift.getAttribute('pr-val');
 				const x = ((event.pageX - window.innerWidth/2) * Number(position)) / 500 ;
@@ -24,18 +21,13 @@
 			});
 			
 		} else {
-		parallaxSpans.forEach((shift: any) => {
-			shift.style.transform = `translateX(0px) translateY(0px)`;
-			shift.style.transition = 'transform 0.75s ease-in-out';
-		});
+			parallaxSpans.forEach((shift: any) => {
+				shift.style.transform = `translateX(0px) translateY(0px)`;
+				shift.style.transition = 'transform 0.75s';
+			});
 		}
 	}
-
-	// const bouncy = document.querySelectorAll('.Bounce');
-	// bouncy.forEach((shift: any) => {
-	// 	const position = shift.getAttribute('pr-val');
-	// 	shift.style.(SET KEYFRAMES)
-	// })
+	
 
 	$(window).scroll(function () {
 		const Abs = document.getElementById("Abs")
@@ -46,7 +38,10 @@
 		const Container = document.querySelectorAll('.Scroll_Slide');
 		Container.forEach((Item: any) => {
 			const multiplier = Item.getAttribute('scroll-mult') || 1;
-			if (window.innerWidth > 750) {
+			if (window.innerWidth > 1920) {
+				const y = (window.scrollY * Number(multiplier));
+				Item.style.transform = `translateY(${y}px)`;
+			} else if (window.innerWidth > 750) {
 				const y = (window.scrollY * Number(multiplier));
 				Item.style.transform = `translateY(${y}px)`;
 			} else {
@@ -57,7 +52,13 @@
 
 		const Header = document.getElementById("Scroll_Area")
 		if (Header) {
-			if (window.innerWidth > 750) {
+			if (window.innerWidth > 1920) {
+				if (window.scrollY > 7000) {
+					Header.style.transform = `translateX(${(window.scrollY - 7000) * -0.1}px)`
+				} else {
+					Header.style.transform = `translateX(0px)`
+				}
+			} else if (window.innerWidth > 750) {
 				if (window.scrollY > 7000) {
 					Header.style.transform = `translateX(${(window.scrollY - 7000) * -0.1}px)`
 				} else {
@@ -77,8 +78,19 @@
 			const multiplier = Item.getAttribute('scroll-mult') || 0;
 			const alpha = Item.getAttribute('scroll-alpha') || 1;
 
-			if (window.innerWidth > 750) {
+			if (window.innerWidth > 1920) {
 				const x = - window.scrollY + Number(multiplier) + 850 ;
+				const a = 0 + (window.scrollY - Number(alpha)) * 0.002;
+
+				if (x < - window.innerWidth) {
+					Item.style.transform = 'translateX(-100vw)';
+					Item.style.opacity = 1
+				} else {
+					Item.style.transform = `translateX(${x}px)`;
+					Item.style.opacity = a
+				}
+			} else if (window.innerWidth > 750) {
+				const x = - window.scrollY + Number(multiplier)*1.15 + 650 ;
 				const a = 0 + (window.scrollY - Number(alpha)) * 0.002;
 
 				if (x < - window.innerWidth) {
@@ -98,8 +110,19 @@
 			const multiplier = Item.getAttribute('scroll-mult') || 0;
 			const alpha = Item.getAttribute('scroll-alpha') || 1;
 
-			if (window.innerWidth > 750) {
+			if (window.innerWidth > 1920) {
 				const x = window.scrollY - Number(multiplier) - 850;
+				const a = 0 + (window.scrollY - Number(alpha)) * 0.002;
+
+				if (x > window.innerWidth) {
+					Item.style.transform = 'translateX(100vw)';
+					Item.style.opacity = 1
+				} else {
+					Item.style.transform = `translateX(${x}px)`;
+					Item.style.opacity = a
+				}
+			} else if (window.innerWidth > 750) {
+				const x = window.scrollY - Number(multiplier)*1.15 - 650;
 				const a = 0 + (window.scrollY - Number(alpha)) * 0.002;
 
 				if (x > window.innerWidth) {
@@ -143,9 +166,10 @@
 
 </script>
 
-<template class="Body">
+<template>
 	<main>
 		<div class="Column">
+			
 			<div class="Abs" id="Abs">
 				<div class="Scroll_Area" id="Scroll_Area">
 					<div class="Scroll_Slide" scroll-mult="0.4">
@@ -204,7 +228,6 @@
 					
 					<h1 class="Bounce">Hola!</h1>
 					<h2 class="Bounce">Soy un desarollador web.</h2>
-					<br><br>
 					<p class="Bounce">A continuación podrán ver todos mis proyectos y algunas de las tecnologías con las que he trabajado.</p>
 					<div class="Hello_Div">
 						<img class="Bounce Gif" src="https://media.tenor.com/dfUTZDtXdw0AAAAC/arknights-amiya.gif"/>
