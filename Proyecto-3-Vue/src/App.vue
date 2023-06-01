@@ -46,8 +46,8 @@
 		const Header = document.getElementById("Scroll_Area")
 		if (Header)
 		if (window.innerWidth > 600) {
-			if (window.scrollY > 4800) {
-				Header.style.transform = `translateY(${(window.scrollY - 4800) * -0.15}px)`
+			if (window.scrollY > 5500) {
+				Header.style.transform = `translateY(${(window.scrollY - 5500) * -0.1}px)`
 			} else {
 				Header.style.transform = `translateY(0px)`
 			}
@@ -105,7 +105,7 @@
 			</div>
 
 			<div class="Scroll_Area" id="Scroll_Area">
-				<div class="Scroll_Slide" scroll-mult="0.8">
+				<div class="Scroll_Slide" scroll-mult="0.7">
 					<img class="Technology" src="https://skillicons.dev/icons?i=html"/>
 					<img class="Technology" src="https://skillicons.dev/icons?i=css"/>
 					<img class="Technology" src="https://skillicons.dev/icons?i=scss"/>
