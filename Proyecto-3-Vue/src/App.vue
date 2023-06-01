@@ -31,36 +31,36 @@
 	}
 
 	$(window).scroll(function () {
-		const Container = document.querySelectorAll('.Scroll_Slide');
-		Container.forEach((Item: any) => {
-			const multiplier = Item.getAttribute('scroll-mult') || 1;
-			if (window.innerWidth > 600) {
-				const y = (window.scrollY * Number(multiplier));
-				Item.style.transform = `translateY(${y}px)`;
-			} else {
-				const y = (window.scrollY * Number(multiplier)*1.5);
-				Item.style.transform = `translateY(${y}px)`;
-			}
-		});
-
 		const Abs = document.getElementById("Abs")
 		if (Abs) {
 			Abs.style.transform = `translateY(${window.scrollY}px)`
 		}
 
+		const Container = document.querySelectorAll('.Scroll_Slide');
+		Container.forEach((Item: any) => {
+			const multiplier = Item.getAttribute('scroll-mult') || 1;
+			if (window.innerWidth > 750) {
+				const y = (window.scrollY * Number(multiplier));
+				Item.style.transform = `translateY(${y}px)`;
+			} else {
+				const x = (window.scrollY * - Number(multiplier)*2.2);
+				Item.style.transform = `translateX(${x}px)`;
+			}
+		});
+
 		const Header = document.getElementById("Scroll_Area")
 		if (Header) {
-			if (window.innerWidth > 600) {
-				if (window.scrollY > 4500) {
-					Header.style.transform = `translateX(${(window.scrollY - 4500) * -0.1}px)`
+			if (window.innerWidth > 750) {
+				if (window.scrollY > 6250) {
+					Header.style.transform = `translateX(${(window.scrollY - 6250) * -0.08}px)`
 				} else {
 					Header.style.transform = `translateX(0px)`
 				}
 			} else {
-				if (window.scrollY > 1200) {
-					Header.style.transform = `translateX(${(window.scrollY - 1200) * -0.15}px)`
+				if (window.scrollY > 2700) {
+					Header.style.transform = `translateY(${(window.scrollY - 2700) * -0.25}px)`
 				} else {
-					Header.style.transform = `translateX(0px)`
+					Header.style.transform = `translateY(0px)`
 				}
 			}
 		}
@@ -70,7 +70,7 @@
 			const multiplier = Item.getAttribute('scroll-mult') || 0;
 			const alpha = Item.getAttribute('scroll-alpha') || 1;
 
-			if (window.innerWidth > 600) {
+			if (window.innerWidth > 750) {
 				const x = - window.scrollY + Number(multiplier);
 				const a = 0 + (window.scrollY - Number(alpha)) * 0.002;
 
@@ -82,13 +82,8 @@
 					Item.style.opacity = a
 				}
 			} else {
-				const x = - window.scrollY + Number(multiplier) * 1.5;
-
-				if (x < - window.innerWidth) {
-					Item.style.transform = 'translateX(-100vw)';
-				} else {
-					Item.style.transform = `translateX(${x}px)`;
-				}
+				Item.style.transform = 'translateX(-100vw)';
+				Item.style.opacity = 1
 			}
 		});
 		const RightSlide = document.querySelectorAll('.Slide_Right');
@@ -96,7 +91,7 @@
 			const multiplier = Item.getAttribute('scroll-mult') || 0;
 			const alpha = Item.getAttribute('scroll-alpha') || 1;
 
-			if (window.innerWidth > 600) {
+			if (window.innerWidth > 750) {
 				const x = window.scrollY - Number(multiplier);
 				const a = 0 + (window.scrollY - Number(alpha)) * 0.002;
 
@@ -108,13 +103,8 @@
 					Item.style.opacity = a
 				}
 			} else {
-				const x = window.scrollY - Number(multiplier) * 1.5;
-
-				if (x > window.innerWidth) {
-					Item.style.transform = 'translateX(100vw)';
-				} else {
-					Item.style.transform = `translateX(${x}px)`;
-				}
+				Item.style.transform = 'translateX(100vw)';
+				Item.style.opacity = 1
 			}
 		});
 
@@ -151,7 +141,7 @@
 		<div class="Column">
 			<div class="Abs" id="Abs">
 				<div class="Scroll_Area" id="Scroll_Area">
-					<div class="Scroll_Slide" scroll-mult="0.6">
+					<div class="Scroll_Slide" scroll-mult="0.4">
 						<img class="Technology S" src="https://skillicons.dev/icons?i=html"/>
 						<img class="Technology S" src="https://skillicons.dev/icons?i=css"/>
 						<img class="Technology S" src="https://skillicons.dev/icons?i=scss"/>
@@ -217,8 +207,8 @@
 			<iframe class="Block Slide_Right" scroll-mult="3250" scroll-alpha="4500" src="https://old-labs.web.app/Lab%204/Lab4.html"></iframe>
 			<h4 class="Slide_Left" scroll-mult="3850" scroll-alpha="5150">Laboratorio 3</h4>
 			<iframe class="Block Slide_Right" scroll-mult="4100" scroll-alpha="5350" src="https://old-labs.web.app/Lab%203/Lab3_Home.html"></iframe>
-
-			<div class="Row Row_Start End_Card Block_Container">
+			<h4 class="Slide_Left" scroll-mult="4700" scroll-alpha="6000">My Skills</h4>
+			<div class="Row Row_Start End_Card Block_Container Slide_Right" scroll-mult="4950" scroll-alpha="6200">
 				<div class="Column">
 					<div class="Column Col_Start Container">
 						<h3>Frontend Developer</h3>

@@ -64,23 +64,10 @@ div {
 	overflow: clip;
 	border-width: 1px;
 }
-.Block {
-	-moz-transform: scale(1, 1);
-	-webkit-transform: scale(1, 1);
-	-o-transform: scale(1, 1);
-	-ms-transform: scale(1,1);
-	transform: scale(1, 1);
-}
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 750px) {
 	.Block {
-		width: 380vw;
-		margin-bottom: -78vw;
-		margin-top: -78vw;
-		-moz-transform: scale(0.25, 0.25); 
-		-webkit-transform: scale(0.25, 0.25); 
-		-o-transform: scale(0.25, 0.25);
-		-ms-transform: scale(0.25, 0.25);
-		transform: scale(0.25, 0.25);
+		width: 95vw;
 	}
 }
 .Block_Container{
@@ -100,7 +87,7 @@ main {
 	border-radius: 10px;
 	border-width: 1px;
 	width: 36vw;
-	height: 5rem;
+	height: 6rem;
 	padding-left: 2vw;
 	padding-right: 2vw;
 	overflow: clip;
@@ -125,7 +112,7 @@ main {
 .Container:hover div {
 	opacity: 1;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	.Container {
 		width: 45vw;
 		height: 5rem;
@@ -149,26 +136,22 @@ main {
 	border-radius: 10px;
 	overflow: clip;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	.Card {
 		width: 95vw;
 		height: 15rem;
-		border-radius: 4px;
 	}
 }
 .End_Card {
 	width: 75vw;
 	justify-content: space-around;
-	margin-top: 5vw;
 	height: 42rem;
 	background: rgb(36, 50, 72);
 	border-radius: 10px;
 	overflow: clip;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	.End_Card {
-		margin-top: 0.25rem;
-		border-radius: 4px;
 		width: 95vw;
 		height: 25rem;
 	}
@@ -186,40 +169,47 @@ main {
 }
 
 h1 {
-	font-size: 60pt;
+	font-size: 6vw;
 	font-weight: 900;
 	-webkit-text-stroke: 0.5px rgb(0,0,0);
 	text-shadow: 0 0 10px rgb(90, 150, 255);
 }
 h2 {
-	font-size: 40pt;
+	font-size: 4vw;
 	font-weight: 900;
-	-webkit-text-stroke: 1px rgb(0,0,0);
+	-webkit-text-stroke: 0.5px rgb(0,0,0);
 	text-shadow: 0 0 10px rgb(90, 150, 255);
 }
 h3 {
-	font-size: 30pt;
+	font-size: 3vw;
 	font-weight: 500;
 }
 h4 {
-	margin-top: 5rem;
-	font-size: 30pt;
+	margin-top: 4rem;
+	margin-bottom: 1rem;
+	font-size: 4vw;
 	font-weight: 500;
 }
 p {
 	font-size: 16pt;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	h1 {
-		font-size: 24pt;
+		font-size: 10vw;
 		font-weight: 900;
 	}
 	h2 {
-		font-size: 20pt;
+		font-size: 8vw;
 		font-weight: 900;
 	}
 	h3 {
-		font-size: 16pt;
+		font-size: 4vw;
+		font-weight: 500;
+	}
+	h4 {
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+		font-size: 8vw;
 		font-weight: 500;
 	}
 	p {
@@ -240,7 +230,7 @@ p {
 	left: 0;
 	height: 100vh;
 	width: fit-content;
-	-webkit-mask-image: linear-gradient(0deg, transparent 0%, white 5%, white 95%, transparent 100%);
+	-webkit-mask-image: linear-gradient(0deg, transparent 0%, white 10%, white 90%, transparent 100%);
 }
 .Scroll_Slide {
 	display: flex;
@@ -248,9 +238,15 @@ p {
 	justify-content: flex-start;
 	translate: 0 -200vh;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
+	.Scroll_Area {
+		width: 100vw;
+		height: fit-content;
+		-webkit-mask-image: linear-gradient(90deg, transparent 0%, white 10%, white 90%, transparent 100%);
+	}
 	.Scroll_Slide {
-		translate: 0 500px;
+		flex-direction: row;
+		translate: 250vw 0;
 	}
 }
 
@@ -270,14 +266,13 @@ p {
 	transform: scale(1.1);
 	animation: iconWiggle 0.3s linear;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	.Technology {
 		margin: 0.05rem;
 		height: 10vw;
 		width: 10vw;
 	}
 }
-
 @keyframes iconWiggle {
 	0% {
 		rotate: 0deg;
