@@ -1,5 +1,6 @@
 <script setup lang="ts">
 	import BG from './assets/Bg.png'
+	import HSR from './assets/HSR.mp4'
 	import $ from 'jquery'
 </script>
 
@@ -17,7 +18,7 @@
 			parallaxSpans.forEach((shift: any) => {
 				const position = shift.getAttribute('pr-val');
 				const x = ((event.pageX - window.innerWidth/2) * Number(position)) / 500 ;
-				const y = ((event.pageY - window.innerHeight/2) * Number(position)) / 500;
+				const y = ((event.pageY- window.scrollY - window.innerHeight/2) * Number(position)) / 500;
 				shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
 				shift.style.transition = `transform ${ReEnterParallax}s`;
 			});
@@ -29,6 +30,12 @@
 		});
 		}
 	}
+
+	// const bouncy = document.querySelectorAll('.Bounce');
+	// bouncy.forEach((shift: any) => {
+	// 	const position = shift.getAttribute('pr-val');
+	// 	shift.style.(SET KEYFRAMES)
+	// })
 
 	$(window).scroll(function () {
 		const Abs = document.getElementById("Abs")
@@ -51,8 +58,8 @@
 		const Header = document.getElementById("Scroll_Area")
 		if (Header) {
 			if (window.innerWidth > 750) {
-				if (window.scrollY > 6250) {
-					Header.style.transform = `translateX(${(window.scrollY - 6250) * -0.08}px)`
+				if (window.scrollY > 7000) {
+					Header.style.transform = `translateX(${(window.scrollY - 7000) * -0.1}px)`
 				} else {
 					Header.style.transform = `translateX(0px)`
 				}
@@ -71,7 +78,7 @@
 			const alpha = Item.getAttribute('scroll-alpha') || 1;
 
 			if (window.innerWidth > 750) {
-				const x = - window.scrollY + Number(multiplier);
+				const x = - window.scrollY + Number(multiplier) + 850 ;
 				const a = 0 + (window.scrollY - Number(alpha)) * 0.002;
 
 				if (x < - window.innerWidth) {
@@ -92,7 +99,7 @@
 			const alpha = Item.getAttribute('scroll-alpha') || 1;
 
 			if (window.innerWidth > 750) {
-				const x = window.scrollY - Number(multiplier);
+				const x = window.scrollY - Number(multiplier) - 850;
 				const a = 0 + (window.scrollY - Number(alpha)) * 0.002;
 
 				if (x > window.innerWidth) {
@@ -116,7 +123,7 @@
 			lerpToZero()
 		}
 	}
-
+	
 	function lerpToZero() {
 	const startValue = 0.5;
 	const startTime = performance.now();
@@ -136,7 +143,7 @@
 
 </script>
 
-<template>
+<template class="Body">
 	<main>
 		<div class="Column">
 			<div class="Abs" id="Abs">
@@ -182,14 +189,26 @@
 
 			<div class="Card">
 				<div
-					class="Background Parallax Column"
-					pr-val="20"
-					:style="{backgroundImage: `url(${BG})` }"
+					class="Background Column"
 					@mouseenter="setIsDivUnderMouse(true)"
 					@mouseleave="setIsDivUnderMouse(false)"
 				>
+					<video class="Parallax HSR" pr-val="20" muted loop autoPlay src='./assets/HSR.mp4' type='video/mp4'></video>
 					<h1 class="Parallax" pr-val="60">Alejandro Martínez</h1>
 					<h2 class="Parallax" pr-val="40">21430</h2>
+				</div>
+			</div>
+			
+			<div class="Card">
+				<div class="Background Bounce Column" :style="{backgroundImage: `url(${BG})` }">
+					
+					<h1 class="Bounce">Hola!</h1>
+					<h2 class="Bounce">Soy un desarollador web.</h2>
+					<br><br>
+					<p class="Bounce">A continuación podrán ver todos mis proyectos y algunas de las tecnologías con las que he trabajado.</p>
+					<div class="Hello_Div">
+						<img class="Bounce Gif" src="https://media.tenor.com/dfUTZDtXdw0AAAAC/arknights-amiya.gif"/>
+					</div>
 				</div>
 			</div>
 
